@@ -1776,8 +1776,32 @@ img.mfp-img {
 }
 
 .svg-advantages {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
+}
+
+.svg-advantages-1 {
+  fill: #D56DE5;
+}
+
+.svg-advantages-2 {
+  fill: #F38649;
+}
+
+.svg-advantages-3 {
+  fill: #F1DA02;
+}
+
+.svg-advantages-4 {
+  fill: #45B1ED;
+}
+
+.svg-advantages-5 {
+  fill: #973FDD;
+}
+
+.svg-advantages-6 {
+  fill: #65C338;
 }
 
 html {
@@ -1948,7 +1972,7 @@ textarea.input {
 .title {
   text-align: center;
   font-size: 1.86667rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.07895em;
   color: #FFFFFF;
   position: relative;
@@ -2128,14 +2152,14 @@ textarea.input {
 }
 
 no-webp .advantages__body {
-  background: url("../img/note.png"); }
+  background: url("../img/note.png") top left; }
 
 .advantages__body {
-  padding: 3.33333rem 0 0 0;
+  padding: 4rem 0 0 0;
 }
 
 .advantages__title {
-  margin: 0 0 2rem 0;
+  margin: 0 0 2.66667rem 0;
 }
 
 .item-advantages {
@@ -2143,20 +2167,23 @@ no-webp .advantages__body {
 }
 
 .item-advantages__info {
-  margin: 0 0 0 1.33333rem;
+  margin: 0 0 2rem 1.33333rem;
 }
 
 .item-advantages__title {
   color: #181818;
-  font-size: 1.46667rem;
-  line-height: 1.09091em;
-  font-weight: 700;
+  font-size: 1.33333rem;
+  line-height: 1.2em;
+  font-weight: 500;
   margin: 0 0 0.53333rem 0;
 }
 
 .item-advantages__text {
   font-family: Roboto,serif;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.46667em;
+  color: #707070;
 }
 
 @media (min-width: 576px) {
@@ -2336,6 +2363,11 @@ no-webp .advantages__body {
     fill: #3983C8;
   }
 
+  .svg-advantages {
+    width: 55px;
+    height: 55px;
+  }
+
   .burger-menu {
     display: none;
   }
@@ -2464,6 +2496,10 @@ no-webp .advantages__body {
 
   .advantages__title {
     margin: 0 0 5.66667rem 0;
+  }
+
+  .item-advantages__info {
+    margin: 0 0 4rem 1.33333rem;
   }
 
   .item-advantages__title {
@@ -2759,5 +2795,5 @@ no-webp .advantages__body {
   }
 }
 
-.webp .advantages__body { background: url(../img/note.webp); }
+.webp .advantages__body { background: url(../img/note.webp) top left; }
 /*# sourceMappingURL=style.css.map */
