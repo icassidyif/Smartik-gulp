@@ -1,0 +1,52 @@
+//header(data-scroll-header).header
+//    .header__container.container
+//        .header__body
+//            .burger-menu
+//                span
+//            a(href='#').header__logo
+//                |LOGO
+//            nav.header__menu.menu
+//                -let mainMenu = {'Главная': '#page-menu', 'Аукцион':'#lots-menu', 'О проекте': '#services-menu', 'Партнерам': '#quotes-menu', 'Контакты': '#info-menu'};
+//                ul.menu__list
+//                    each val, key in mainMenu
+//                        li
+//                            a(data-scroll href=val).menu__link=key
+header(data-scroll-header).header
+  .header__body
+    .header__bg.ibg
+      +image('header-decor.svg')
+    .header__container.container
+      .header__row.row
+        .header__column.column.column-xl-1-2
+          h1.header__title.title.title_main Вітаємо в приватному закладі дошкільної освіти
+          .header__subtitle
+            span
+              span(style='font-weight: 700') “Smartik”
+              | – навчальниій простір, який включає в себе
+              span(style='color:#C98BE7')  курси іноземних мов
+              |,
+              span(style='color:#77BF98')  дитячий садок
+              |  та організацією
+              span(style='color:#EB9869')  літніх і зимових таборів.
+        .header__column.column.column-xl-1-2
+          .header__kid
+            +image('kid.png')
+
+
+    .header__navigation.navigation-header
+      .navigation-header__container.container
+        .navigation-header__body
+          .burger-menu
+            span
+          a(href='#').navigation-header__logo
+            +image('logo.png')
+          nav.navigation-header__menu.menu
+            -let mainMenu = {'Переваги': '#', 'Садок': '#', 'Табори': '#', 'Мовні курси': '#', 'Про нас':'#','Викладачі': '#', 'Контакти': '#'};
+            ul.menu__list
+              each val, key in mainMenu
+                li
+                  a(data-scroll href=val).menu__link=key
+          .navigation-header__btn
+            a(href='#').btn.btn_small
+              +icon('phone').btn__icon
+              span.btn__text Передзвоніть мені

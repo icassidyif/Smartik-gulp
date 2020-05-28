@@ -1,0 +1,201 @@
+//My custom burger menu style style========================================
+.burger-menu
+  position: relative
+  display: block
+  width: 30px
+  height: 20px
+  z-index: 2
+  &:before, &:after
+    content: ''
+    position: absolute
+    background-color: #FFFFFF
+    height: 2px
+    width: 100%
+    left: 0
+    transition: all 0.3s ease-out
+  &:before
+    top: 0
+  &:after
+    bottom: 0
+  span
+    position: absolute
+    top: calc(50% - 1px)
+    height: 2px
+    width: 100%
+    background-color: #ffffff
+    transition: transform 0.1s ease-out
+  &.active
+    &:before
+      transform: rotate(45deg)
+      top: 50%
+    &:after
+      transform: rotate(-45deg)
+      top: 50%
+    span
+      transform: scale(0)
+  +breakpoint(md)
+    display: none
+
+.menu
+  position: fixed
+  top: -100%
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background: linear-gradient(0deg, #3983C8, #3983C8), linear-gradient(360deg, #2768B4 0%, rgba(93, 131, 176, 0.53) 103.71%)
+  transition: top 0.3s ease-out
+  padding: 100px 0 20px 0
+  text-align: center
+  z-index: 1
+  +breakpoint(md)
+    position: static
+    padding: 0
+    display: block
+    height: auto
+  &__list
+    display: block
+    position: relative
+    z-index: 1
+    +breakpoint(md)
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      flex: 0 0 auto
+      padding: 0 em(20,17)
+    li
+      font-size: rem(20px)
+      margin: 0 0 em(20,20) 0
+      +breakpoint(md)
+        font-size: rem(17px)
+        margin: 0 em(20,17) 0 0
+        &:last-child
+          margin: 0
+  &__link
+    display: block
+    font-weight: 700
+    color: #FFFFFF
+    text-transform: uppercase
+    white-space: nowrap
+    position: relative
+    +breakpoint(md)
+      text-transform: none
+      font-weight: 500
+      line-height: em(35,17)
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translate(-50%)
+        height: 2px
+        background-color: #FFCA41
+        width: 0
+        transition: width 0.3s ease-out
+      &:hover
+        color: #FFCA41
+        &:after
+          width: 50%
+
+  &:after
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 80px
+    background: linear-gradient(0deg, #3983C8, #3983C8), linear-gradient(360deg, #2768B4 0%, rgba(93, 131, 176, 0.53) 103.71%)
+    z-index: 2
+    +breakpoint(md)
+      display: none
+  &.active
+    top: 0
+//===================================================================
+
+
+//My custom form style========================================
+.form
+  &__row
+  &__column
+  &__line
+  &__input
+  &__button
+  &__error
+    color: red
+//===================================================================
+
+//My custom inputs style========================================
+input[type='text'], input[type='email'], input[type='tel'], textarea
+  appearance: none
+.input
+  border-radius: 0
+  width: 100%
+  height: 100%
+  color: #4f4f4f
+  font-size: 15px
+  display: block
+  padding: 0 25px
+  &.focus
+    color: #000
+  &.error
+textarea.input
+  resize: none
+  padding: 0
+//===================================================================
+
+.title
+  text-align: center
+  font-size: rem(38px)
+  font-weight: 500
+  line-height: em(41,38)
+  color: #FFFFFF
+  position: relative
+  &_main
+    font-size: rem(32px)
+    line-height: em(35,32)
+    text-align: left
+    +breakpoint(md)
+      font-size: rem(42px)
+      line-height: em(45,42)
+  &_black
+    color: #181818
+// Images like a BG
+.ibg
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  img
+    width: 0
+    height: 0
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+//-----end
+
+//--------------------------
+.btn
+  display: inline-flex
+  align-items: center
+  font-family: Roboto, serif
+  font-weight: 700
+  color: #3983C8
+  font-size: 14px
+  text-transform: uppercase
+  background-color: #FFCA41
+  border-radius: 10%/50%
+  &_small
+    background: none
+    +breakpoint(md)
+      background-color: #FFCA41
+  +breakpoint(md)
+    padding: em(16,14) em(23,14)
+  &__icon
+  &__text
+    display: none
+    margin: 0 0 0 em(8,14)
+    +breakpoint(md)
+      display: block
+//-----------------------------------------

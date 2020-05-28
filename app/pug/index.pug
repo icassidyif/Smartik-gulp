@@ -1,0 +1,10 @@
+include particles/_vars
+include particles/_mixins
+include particles/_head
+body
+  .wrapper
+    include particles/_header
+    main.page#page-menu
+    include particles/_footer
+  script(src='js/vendors.js')
+  script(src='js/app.min.js')
