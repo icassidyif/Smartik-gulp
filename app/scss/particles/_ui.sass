@@ -150,6 +150,16 @@ textarea.input
   line-height: em(41,38)
   color: #FFFFFF
   position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: -20px
+    height: 4px
+    width: 130px
+    left: 50%
+    transform: translate(-50%)
+    background: #45B0ED
+
   +breakpoint(md)
     font-size: rem(38px)
     line-height: em(41,38)
@@ -157,6 +167,8 @@ textarea.input
     font-size: rem(32px)
     line-height: em(35,32)
     text-align: left
+    &:after
+      display: none
     +breakpoint(md)
       font-size: rem(42px)
       line-height: em(45,42)

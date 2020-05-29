@@ -30,3 +30,6 @@ function ibg() {
 }
 //end img like BG
 
+// Spoiler by Cassidy
+
+//end spoiler

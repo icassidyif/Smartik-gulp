@@ -21,13 +21,31 @@ body
 //end-
 
 
+// Spoiler
+.spoiler
+  display: inline-flex
+  align-items: center
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: -8px
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: #FFCA41
 
+  label
+    cursor: pointer
+    font-family: Bloggersans, serif
+    font-size: rem(18px)
+    font-weight: 700
+    color: #FFCA41
+    margin: 0 8px 0 0
+  &__rest
+    display: none
 
 //
-//
-
-
-
 
 //
 //
