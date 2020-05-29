@@ -30,6 +30,25 @@ function ibg() {
 }
 //end img like BG
 
-// Spoiler by Cassidy
-
-//end spoiler
+// round buttons by Cassidy
+function roundButtons(buttons) {
+  buttons.forEach(button => {
+    let btnBefore = document.createElement('div');
+    let btnAfter = document.createElement('div');
+    btnBefore.classList.add('btn__before');
+    btnAfter.classList.add('btn__after');
+    button.appendChild(btnBefore);
+    button.appendChild(btnAfter);
+    let btnHeight = button.clientHeight;
+    btnBefore.style.width = `${btnHeight}px`;
+    btnAfter.style.width = `${btnHeight}px`;
+    btnBefore.style.left = `-${btnHeight/2}px`;
+    btnAfter.style.right = `-${btnHeight/2}px`;
+    let color = getComputedStyle(button).backgroundColor;
+    btnBefore.style.backgroundColor = color;
+    btnAfter.style.backgroundColor = color;
+    let padButton = getComputedStyle(button).padding.match(/\d+/g).map(Number);
+    button.style.padding = `${padButton[0]}px ${padButton[1]-(btnHeight/2)}px`;
+  })
+}
+//end

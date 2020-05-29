@@ -145,9 +145,9 @@ textarea.input
 
 .title
   text-align: center
-  font-size: rem(28px)
+  font-size: rem(32px)
   font-weight: 500
-  line-height: em(41,38)
+  line-height: em(41,32)
   color: #FFFFFF
   position: relative
   &:after
@@ -159,7 +159,6 @@ textarea.input
     left: 50%
     transform: translate(-50%)
     background: #45B0ED
-
   +breakpoint(md)
     font-size: rem(38px)
     line-height: em(41,38)
@@ -172,8 +171,28 @@ textarea.input
     +breakpoint(md)
       font-size: rem(42px)
       line-height: em(45,42)
+  &_small
+    font-size: rem(24px)
+    &:after
+      width: 58px
+      bottom: -12px
+      height: 3px
+    +breakpoint(md)
+      font-size: rem(28px)
   &_black
     color: #181818
+  &_green
+    color: #65C338
+    &:after
+      background: #65C338
+  &_orange
+    color: #F28345
+    &:after
+      background: #F28345
+  &_violet
+    color: #973FDD
+    &:after
+      background: #973FDD
 // Images like a BG
 .ibg
   background-position: center
@@ -194,23 +213,68 @@ textarea.input
 .btn
   display: inline-flex
   align-items: center
-  font-family: Roboto, serif
+  font-family: Bloggersans, serif
   font-weight: 700
-  color: #3983C8
-  font-size: 14px
+  color: #ffffff
+  font-size: rem(16px)
+  letter-spacing: 0.05em
   text-transform: uppercase
   background-color: #FFCA41
-  border-radius: 10%/50%
+  padding: 15px 53px
+  position: relative
+  height: 46px
+  border-radius: 23px
+  transition: background-color 0.3s ease-out
+  &_green
+    background-color: #65C338
+    +breakpoint(md)
+      &:hover
+        background-color: #FFFFFF
+        color: #65C338
+        border: 2px solid #65C338
+  &_orange
+    background-color: #F28345
+    +breakpoint(md)
+      &:hover
+        background-color: #FFFFFF
+        color: #F28345
+        border: 2px solid #F28345
+  &_violet
+    background-color: #973FDD
+    +breakpoint(md)
+      &:hover
+        background-color: #FFFFFF
+        color: #973FDD
+        border: 2px solid #973FDD
+
   &_small
     background: none
     +breakpoint(md)
       background-color: #FFCA41
-  +breakpoint(md)
-    padding: em(16,14) em(23,14)
   &__icon
   &__text
     display: none
     margin: 0 0 0 em(8,14)
     +breakpoint(md)
       display: block
+  +breakpoint(md)
+    &:hover
+      span
+        animation: btnAnim 0.5s ease-out
+
+@keyframes btnAnim
+  0%
+    transform: translateY(0px)
+  10%
+    transform: translateY(-1px)
+  20%
+    transform: translateY(-2px)
+  30%
+    transform: translateY(-3px)
+  50%
+    transform: translateY(-2px)
+  75%
+    transform: translateY(-1px)
+  100%
+    transform: translateY(0px)
 //-----------------------------------------

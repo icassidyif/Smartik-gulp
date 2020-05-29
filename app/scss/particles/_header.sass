@@ -73,7 +73,7 @@
     text-align: center
     position: relative
     z-index: 2
-    transition: transform 0.5s ease-out
+    animation: scale 5s ease-out infinite
     &:before
       content: ''
       position: absolute
@@ -94,8 +94,16 @@
     +breakpoint(xl)
       position: absolute
       bottom: 0
-      &:hover
-        transform: scale(1.02)
+
+@keyframes scale
+  0%
+    transform: scale(1)
+  40%
+    transform: scale(1.02)
+  70%
+    transform: scale(1.02)
+  100%
+    transform: scale(1)
 
 .navigation-header
   position: fixed

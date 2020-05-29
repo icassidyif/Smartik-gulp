@@ -32,8 +32,29 @@ function ibg() {
     }
   });
 } //end img like BG
-// Spoiler by Cassidy
-//end spoiler
+// round buttons by Cassidy
+
+
+function roundButtons(buttons) {
+  buttons.forEach(function (button) {
+    var btnBefore = document.createElement('div');
+    var btnAfter = document.createElement('div');
+    btnBefore.classList.add('btn__before');
+    btnAfter.classList.add('btn__after');
+    button.appendChild(btnBefore);
+    button.appendChild(btnAfter);
+    var btnHeight = button.clientHeight;
+    btnBefore.style.width = "".concat(btnHeight, "px");
+    btnAfter.style.width = "".concat(btnHeight, "px");
+    btnBefore.style.left = "-".concat(btnHeight / 2, "px");
+    btnAfter.style.right = "-".concat(btnHeight / 2, "px");
+    var color = getComputedStyle(button).backgroundColor;
+    btnBefore.style.backgroundColor = color;
+    btnAfter.style.backgroundColor = color;
+    var padButton = getComputedStyle(button).padding.match(/\d+/g).map(Number);
+    button.style.padding = "".concat(padButton[0], "px ").concat(padButton[1] - btnHeight / 2, "px");
+  });
+} //end
 //Menu BURGER
 
 
@@ -218,7 +239,9 @@ $('.spoiler').click(function () {
   } else {
     $(this).find('label').html('Читати далі');
   }
-}); //=========================================================================
+}); //Round buttons====================================================================
+// let buttons = document.querySelectorAll('.btn');
+// roundButtons(buttons);
 //=========================================================================
 //=========================================================================
 //=========================================================================
