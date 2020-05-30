@@ -2420,15 +2420,17 @@ no-webp .advantages__body {
 
 .about__bg {
   position: absolute;
+  background: url("../img/about-decor.svg") top center repeat-y;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 
 .about__container {
   max-width: 970px;
+  position: relative;
+  z-index: 2;
 }
 
 .about__title {
