@@ -1,16 +1,3 @@
-//header(data-scroll-header).header
-//    .header__container.container
-//        .header__body
-//            .burger-menu
-//                span
-//            a(href='#').header__logo
-//                |LOGO
-//            nav.header__menu.menu
-//                -let mainMenu = {'Главная': '#page-menu', 'Аукцион':'#lots-menu', 'О проекте': '#services-menu', 'Партнерам': '#quotes-menu', 'Контакты': '#info-menu'};
-//                ul.menu__list
-//                    each val, key in mainMenu
-//                        li
-//                            a(data-scroll href=val).menu__link=key
 header(data-scroll-header).header
   .header__body
     .header__bg
@@ -31,7 +18,6 @@ header(data-scroll-header).header
           .header__kid
             +image('kid.png')
 
-
     .header__navigation.navigation-header
       .navigation-header__container.container
         .navigation-header__body
@@ -46,6 +32,7 @@ header(data-scroll-header).header
                 li
                   a(data-scroll href=val).menu__link=key
           .navigation-header__btn
-            a(href='#').btn.btn_small
-              +icon('phone').btn__icon
+            a(href='#').btn.btn_header
+              .btn__icon
+                +icon('phone')
               span.btn__text Передзвоніть мені

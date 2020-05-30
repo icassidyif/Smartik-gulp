@@ -33,7 +33,7 @@
       top: 50%
     span
       transform: scale(0)
-  +breakpoint(md)
+  +breakpoint(lg)
     display: none
 
 .menu
@@ -48,7 +48,7 @@
   padding: 100px 0 20px 0
   text-align: center
   z-index: 1
-  +breakpoint(md)
+  +breakpoint(lg)
     position: static
     padding: 0
     display: block
@@ -57,7 +57,7 @@
     display: block
     position: relative
     z-index: 1
-    +breakpoint(md)
+    +breakpoint(lg)
       display: flex
       justify-content: center
       flex-wrap: wrap
@@ -66,7 +66,7 @@
     li
       font-size: rem(20px)
       margin: 0 0 em(20,20) 0
-      +breakpoint(md)
+      +breakpoint(lg)
         font-size: rem(17px)
         margin: 0 em(20,17) 0 0
         &:last-child
@@ -78,7 +78,7 @@
     text-transform: uppercase
     white-space: nowrap
     position: relative
-    +breakpoint(md)
+    +breakpoint(lg)
       text-transform: none
       font-weight: 500
       line-height: em(35,17)
@@ -96,7 +96,6 @@
         color: #FFCA41
         &:after
           width: 50%
-
   &:after
     content: ''
     position: fixed
@@ -106,7 +105,7 @@
     height: 80px
     background: linear-gradient(0deg, #3983C8, #3983C8), linear-gradient(360deg, #2768B4 0%, rgba(93, 131, 176, 0.53) 103.71%)
     z-index: 2
-    +breakpoint(md)
+    +breakpoint(lg)
       display: none
   &.active
     top: 0
@@ -220,10 +219,10 @@ textarea.input
   letter-spacing: 0.05em
   text-transform: uppercase
   background-color: #FFCA41
-  padding: 15px 53px
+  padding: 0 53px
   position: relative
-  height: 46px
-  border-radius: 23px
+  height: 52px
+  border-radius: 26px
   transition: background-color 0.3s ease-out
   &_green
     background-color: #65C338
@@ -246,20 +245,30 @@ textarea.input
         background-color: #FFFFFF
         color: #973FDD
         border: 2px solid #973FDD
-
-  &_small
+  &_header
+    font-size: rem(14px)
+    padding: 0 23px
+    white-space: nowrap
     background: none
-    +breakpoint(md)
+    +breakpoint(lg)
       background-color: #FFCA41
+      color: #3983C8
+    &:hover
+      background-color: #FFFFFF
+      color: #FFCA41
+      .svg-phone
+        fill: #FFCA41
   &__icon
   &__text
     display: none
     margin: 0 0 0 em(8,14)
-    +breakpoint(md)
+    +breakpoint(lg)
       display: block
   +breakpoint(md)
     &:hover
       span
+        animation: btnAnim 0.5s ease-out
+      .btn__icon
         animation: btnAnim 0.5s ease-out
 
 @keyframes btnAnim
