@@ -1,7 +1,7 @@
 // Sliders -- Generate required classes and elements for swiper slider
-let sliders = document.querySelectorAll('.swiper');
-if(sliders){
-  sliders.forEach(slider => {
+let swipper = document.querySelectorAll('.swiper');
+if(swipper){
+  swipper.forEach(slider => {
     if(!slider.classList.contains('swiper-build')) {
       let sliderItems = Array.from(slider.children);
       if(sliderItems){
