@@ -98,7 +98,7 @@ $(document).ready(function () {
     adaptiveHeight: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 900,
+    speed: 500,
     easing: 'ease',
     infinite: true,
     initialSlide: 1,
@@ -129,6 +129,30 @@ $(document).ready(function () {
       settings: {
         slidesToShow: 1,
         arrows: false
+      }
+    }]
+  });
+  $('.slider-garden').slick({
+    arrows: true,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    easing: 'ease',
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 2500,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 576,
+      settings: {
+        arrows: true
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        adaptiveHeight: false
       }
     }]
   });
