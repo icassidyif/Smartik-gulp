@@ -47,9 +47,49 @@ body
 
 //
 
+// MODAL WINDOWS
+.modal-info
+  font-family: Roboto, serif
+  font-weight: 400
+  line-height: em(24,15)
+
+  background: white
+  padding: 10px 20px
+  max-width: 770px
+  margin: 40px auto
+  position: relative
+  +breakpoint(sm)
+    padding: 20px 30px
+  +breakpoint(md)
+    padding: 100px
+  &__body
+    p
+      margin: 0 0 em(15,15) 0
+  &__title
+    text-transform: uppercase
+    color: #3983C8
+    margin: em(20,15) 0 em(15,15) 0
+  &__list
+    li
+      padding: 0 0 0 10px
+      position: relative
+      &:before
+        content: '-'
+        margin: 0 5px 0 0
+  &__phone
+    display: block
+    color: #65C338
+//
+
+
 //
 //
 
+//
+//
+
+//
+//
 
 //
 //
