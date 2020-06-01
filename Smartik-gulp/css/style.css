@@ -2014,18 +2014,22 @@ textarea.input {
   position: relative;
   height: 52px;
   border-radius: 26px;
+  border: 2px solid;
   transition: background-color 0.3s ease-out;
 }
 
 .btn_green {
   background-color: #65C338;
+  border-color: #65C338;
 }
 
 .btn_orange {
+  border-color: #F28345;
   background-color: #F28345;
 }
 
 .btn_violet {
+  border-color: #973FDD;
   background-color: #973FDD;
 }
 
@@ -2034,6 +2038,7 @@ textarea.input {
   padding: 0 23px;
   white-space: nowrap;
   background: none;
+  border: none;
 }
 
 .btn_header:hover {
@@ -2575,6 +2580,31 @@ no-webp .advantages__body {
   background-color: #65C338;
 }
 
+.garden__row {
+  margin: 0 0 60px 0;
+}
+
+.garden__btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.garden__btn .btn {
+  padding: 0;
+  margin: 0 30px 0 0;
+  background: none;
+  border: none;
+  color: #65C338;
+}
+
+.garden__btn .btn:last-child {
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #FF6E41;
+  border-radius: 26px;
+}
+
 .content-garden {
   font-family: Roboto, serif;
   font-weight: 500;
@@ -2640,6 +2670,48 @@ no-webp .advantages__body {
 .slider-garden__item img {
   max-width: 100%;
   max-height: 400px;
+}
+
+/* overlay at start */
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* overlay animate in */
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* overlay animate out */
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* content animate it */
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+.mfp-counter {
+  display: none;
 }
 
 .slick-list {
@@ -2743,6 +2815,25 @@ no-webp .advantages__body {
   -webkit-transform: translate(200%, 50%);
       -ms-transform: translate(200%, 50%);
           transform: translate(200%, 50%);
+}
+
+@media (min-width: 450px) {
+  .garden__btn .btn {
+    background-color: #65C338;
+    color: #FFFFFF;
+    border: 2px solid #65C338;
+    padding: 0 37px;
+  }
+
+  .garden__btn .btn:last-child {
+    border: 2px solid #FF6E41;
+  }
+
+  .garden__btn .btn:last-child:hover {
+    background-color: #FF6E41;
+    color: #FFFFFF;
+    border-color: #FF6E41;
+  }
 }
 
 @media (min-width: 576px) {
@@ -2950,19 +3041,16 @@ no-webp .advantages__body {
   .btn_green:hover {
     background-color: #FFFFFF;
     color: #65C338;
-    border: 2px solid #65C338;
   }
 
   .btn_orange:hover {
     background-color: #FFFFFF;
     color: #F28345;
-    border: 2px solid #F28345;
   }
 
   .btn_violet:hover {
     background-color: #FFFFFF;
     color: #973FDD;
-    border: 2px solid #973FDD;
   }
 
   .btn:hover span {

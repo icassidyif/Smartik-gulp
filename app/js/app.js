@@ -3,6 +3,7 @@
 //=include ./particles/smooth-scroll.js
 
 ////=include ./particles/swipper.js
+//=include ./particles/popup.js
 //=include ./particles/slick.js
 
 //=include ./particles/script.js

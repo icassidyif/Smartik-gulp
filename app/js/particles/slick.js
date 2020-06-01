@@ -44,6 +44,7 @@ $(document).ready(function () {
     ]
   });
 
+
   $('.slider-garden').slick({
     arrows: true,
     adaptiveHeight: true,

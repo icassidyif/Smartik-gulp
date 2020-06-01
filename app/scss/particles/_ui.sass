@@ -223,33 +223,35 @@ textarea.input
   position: relative
   height: 52px
   border-radius: 26px
+  border: 2px solid
   transition: background-color 0.3s ease-out
   &_green
     background-color: #65C338
+    border-color: #65C338
     +breakpoint(md)
       &:hover
         background-color: #FFFFFF
         color: #65C338
-        border: 2px solid #65C338
   &_orange
+    border-color: #F28345
     background-color: #F28345
     +breakpoint(md)
       &:hover
         background-color: #FFFFFF
         color: #F28345
-        border: 2px solid #F28345
   &_violet
+    border-color: #973FDD
     background-color: #973FDD
     +breakpoint(md)
       &:hover
         background-color: #FFFFFF
         color: #973FDD
-        border: 2px solid #973FDD
   &_header
     font-size: rem(14px)
     padding: 0 23px
     white-space: nowrap
     background: none
+    border: none
     +breakpoint(lg)
       background-color: #FFCA41
       color: #3983C8
