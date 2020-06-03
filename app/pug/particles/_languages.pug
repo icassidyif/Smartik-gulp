@@ -3,3 +3,101 @@
     .languages__bg
     .languages__container.container
       h2.languages__title.title.title_black Іноземні мови - це просто!
+      .languages__row.row
+        .languages__column.column.column-md-1-2.column-lg-1-3
+          .languages__card.card-languages
+            h3.card-languages__title.title.title_black Методика вивчення
+            ul.card-languages__list
+              li.card-languages__item
+                +icon('lang-list', 'card-languages__icon')
+                span Актуальний вокабуляр та його засвоєння в процесі обговорення, діалогів та розмовних ситуацій;
+              li.card-languages__item
+                +icon('lang-list', 'card-languages__icon')
+                span Аудіо та відео матеріали, для кращого розуміння мови;
+              li.card-languages__item
+                +icon('lang-list', 'card-languages__icon')
+                span Чітке та доступне пояснення граматичного матеріалу, виконання вправ на закріплення вивченого;
+
+        .languages__column.column.column-md-1-2.column-lg-1-3
+          .languages__card.card-languages
+            h3.card-languages__title.title.title_black Форми навчання
+            ul.card-languages__list
+              li.card-languages__item.card-languages__item_big
+                +icon('lang-list2', 'card-languages__icon')
+                span Групи для школярів
+              li.card-languages__item.card-languages__item_big
+                +icon('lang-list2', 'card-languages__icon')
+                span Групи для студентів
+              li.card-languages__item.card-languages__item_big
+                +icon('lang-list2', 'card-languages__icon')
+                span Групи для дорослих
+              li.card-languages__item.card-languages__item_big
+                +icon('lang-list2', 'card-languages__icon')
+                span Індивідуальні заняття
+              li.card-languages__item.card-languages__item_big
+                +icon('lang-list2', 'card-languages__icon')
+                span Підготовка до ЗНО та вступу
+              li.card-languages__item.card-languages__item_big
+                +icon('lang-list2', 'card-languages__icon')
+                span Підготовка вступних іспитів
+
+        .languages__column.column.column-md-1-2.column-lg-1-3
+          .languages__card.card-languages
+            h3.card-languages__title.title.title_black Мови, що вивчаються
+            .card-languages__flags
+              .card-languages__flag
+                +image('flags/flag-1.png')
+                span Англійська мова
+              .card-languages__flag
+                +image('flags/flag-2.png')
+                span Німецька мова
+              .card-languages__flag
+                +image('flags/flag-3.png')
+                span Французька мова
+              .card-languages__flag
+                +image('flags/flag-4.png')
+                span Польська мова
+
+      .languages__btn
+        a(href='#').btn.btn_violet
+          span ЗАПИСАТИСЯ
+        a(href='#detail-languages').btn.btn_blue.popup-with-move-anim
+          span Детальніше
+
+
+#detail-languages.modal-info.zoom-anim-dialog.mfp-hide
+  .modal-info__body
+    p Освітній центр “Smartik ” надає послуги викладання анлійської, французької, польської та німецької мов для дітей та дорослих будь-якого віку.
+    p Оскільки ми на ринку понад 4 роки - ми гарантуємо якісний та цікавий процес здобуття знань, індивідуальний підхід до кожного учня та комфортні умови навчання!
+    p Навчання відбувається в приємному і мотивуючому мовному середовищі, з професійними викладачами, які розуміють потреби студентів та сприяють розвитку необхідних знань. Викладачі також забезпечують комфортні умови для подолання мовних бар'єрів та  розвитку необхідних комунікаційних навичок.
+    h2.modal-info__title ПРИЧИНИ ВИБРАТИ САМЕ “SMARTIK”
+    p
+      ul.modal-info__list
+        li професійний викладацький склад з відповідною освітою та стажем роботи;
+        li індивідуальний підхід до потреб кожного студента;
+        li ефективність- навчання, яке дає  результати;
+        li зручні умови навчання в аудиторіях в центральній частині міста;
+        li чітке та доступне пояснення граматичного матеріалу, виконання вправ на закріплення вивченого;
+        li актуальний вокабуляр та його засвоєння в процесі обговорення, діалогів та розмовних ситуацій;
+        li аудіо та відео матеріали, для кращого розуміння мови;
+        li заняття виключно в невеликих групах (до 8-ми людей) або індивідуально;
+        li доступна вартість навчання
+    h2.modal-info__title Перелік мов, що вивчаються :
+    p
+      ul.modal-info__list
+        li курси англійської мови;
+        li курси німецької мови;
+        li курси французької мови;
+        li курси польської мови
+    h2.modal-info__title Форми навчання :
+    p
+      ul.modal-info__list
+        li індивідуальні заняття;
+        li групи для школярів;
+        li групи для студентів;
+        li групи для дорослих;
+        li підготовка до ЗНО та вступу в магістратуру (англійська);
+        li підготовка вступних іспитів до ВУЗу (польська);
+    h2.modal-info__title Форми навчання :
+    p Один курс іноземної мови в середньому розрахований на 2 навчальні семестри. Один семестр складається з 16 тижнів - 72 академічні години. Також доступне навчання 3 місяці – тричі на тиждень (експрес-курс з англійсько) та 6 місяців –тричі на тиждень. Заняття проходять 2 рази на тиждень по 90 хвилин (якщо це групові заняття) і по 60 хвилин, якщо індивідуальні. Групи формуються за рівнем знання мови на підставі тестування.
+

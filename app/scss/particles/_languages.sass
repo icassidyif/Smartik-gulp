@@ -1,8 +1,14 @@
 .languages
   &__body
+    background-color: #FBFBFB
     position: relative
+    padding: rem(60px) 0 rem(60px) 0
+    z-index: 1
+    +breakpoint(md)
+      padding: rem(100px) 0 rem(100px) 0
   &__bg
     position: absolute
+    z-index: -1
     top: 0
     left: 0
     width: 100%
@@ -16,4 +22,105 @@
     &:after
       background-color: #973FDD
   &__row
+    justify-content: center
+    margin: 0 0 30px 0
+    +breakpoint(450)
+      margin: 0 0 50px 0
   &__column
+    margin: 0 0 30px 0
+    +breakpoint(lg)
+      margin: 0
+    &:last-child
+      margin: 0
+  &__card
+  &__btn
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    .btn
+      padding: 0
+      margin: 0 30px 0 0
+      background: none
+      border: none
+      color: #973FDD
+      +breakpoint(450)
+        background-color: #973FDD
+        color: #FFFFFF
+        border: 2px solid #973FDD
+        padding: 0 37px
+      &:last-child
+        margin: 0
+        background-color: #FFFFFF
+        color: #3983C8
+        border-radius: 26px
+        +breakpoint(450)
+          border: 2px solid #3983C8
+          &:hover
+            background-color: #3983C8
+            color: #FFFFFF
+            border-color: #3983C8
+
+
+
+.card-languages
+  max-width: 360px
+  margin: 0 auto
+  height: 100%
+  background: #FFFFFF
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+  padding: 30px 20px
+  +breakpoint(360)
+    padding: 50px 40px
+  +breakpoint(lg)
+    padding: 30px 20px
+  +breakpoint(xl)
+    padding: 50px 40px
+  &__title
+    font-size: rem(24px)!important
+    text-align: left
+    margin: 0 0 em(30,24) 0
+    &:after
+      display: none
+    +breakpoint(360)
+      font-size: rem(28px)!important
+      margin: 0 0 em(40,28) 0
+  &__list
+  &__item
+    font-family: Roboto, serif
+    line-height: em(22,15)
+    margin: 0 0 30px 0
+    display: flex
+    align-items: flex-start
+    &:last-child
+      margin: 0
+    span
+      margin: 0 0 0 15px
+    &_big
+      font-size: rem(16px)
+      line-height: em(20,16)
+      margin: 0 0 20px 0
+      +breakpoint(360)
+        font-size: rem(18px)
+        line-height: em(22,18)
+  &__icon
+    flex: 0 0 24px
+  &__flags
+    display: flex
+    flex-wrap: wrap
+  &__flag
+    font-family: Roboto, serif
+    font-weight: 500
+    color: #3983C8
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex: 1 0 50%
+    margin: 0 0 30px 0
+    img
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+      margin: 0 0 15px 0
+    span
+
+
+
+

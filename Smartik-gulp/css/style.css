@@ -1017,6 +1017,18 @@ img.mfp-img {
   fill: #FF6E41;
 }
 
+.svg-lang-list {
+  width: 24px;
+  height: 25px;
+  fill: #3983C8;
+}
+
+.svg-lang-list2 {
+  width: 16px;
+  height: 13px;
+  fill: #3983C8;
+}
+
 html {
   font-size: 15px;
 }
@@ -1367,6 +1379,11 @@ textarea.input {
 .btn_violet {
   border-color: #973FDD;
   background-color: #973FDD;
+}
+
+.btn_blue {
+  border-color: #3983C8;
+  background-color: #3983C8;
 }
 
 .btn_header {
@@ -2009,11 +2026,15 @@ no-webp .advantages__body {
 }
 
 .languages__body {
+  background-color: #FBFBFB;
   position: relative;
+  padding: 4rem 0 4rem 0;
+  z-index: 1;
 }
 
 .languages__bg {
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -2027,6 +2048,106 @@ no-webp .advantages__body {
 
 .languages__title:after {
   background-color: #973FDD;
+}
+
+.languages__row {
+  justify-content: center;
+  margin: 0 0 30px 0;
+}
+
+.languages__column {
+  margin: 0 0 30px 0;
+}
+
+.languages__column:last-child {
+  margin: 0;
+}
+
+.languages__btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.languages__btn .btn {
+  padding: 0;
+  margin: 0 30px 0 0;
+  background: none;
+  border: none;
+  color: #973FDD;
+}
+
+.languages__btn .btn:last-child {
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #3983C8;
+  border-radius: 26px;
+}
+
+.card-languages {
+  max-width: 360px;
+  margin: 0 auto;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+}
+
+.card-languages__title {
+  font-size: 1.6rem !important;
+  text-align: left;
+  margin: 0 0 1.25em 0;
+}
+
+.card-languages__title:after {
+  display: none;
+}
+
+.card-languages__item {
+  font-family: Roboto, serif;
+  line-height: 1.46667em;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-languages__item:last-child {
+  margin: 0;
+}
+
+.card-languages__item span {
+  margin: 0 0 0 15px;
+}
+
+.card-languages__item_big {
+  font-size: 1.06667rem;
+  line-height: 1.25em;
+  margin: 0 0 20px 0;
+}
+
+.card-languages__icon {
+  flex: 0 0 24px;
+}
+
+.card-languages__flags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-languages__flag {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  color: #3983C8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 50%;
+  margin: 0 0 30px 0;
+}
+
+.card-languages__flag img {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 0 15px 0;
 }
 
 /* overlay at start */
@@ -2225,6 +2346,22 @@ no-webp .advantages__body {
           transform: translate(200%, 50%);
 }
 
+@media (min-width: 360px) {
+  .card-languages {
+    padding: 50px 40px;
+  }
+
+  .card-languages__title {
+    font-size: 1.86667rem !important;
+    margin: 0 0 1.42857em 0;
+  }
+
+  .card-languages__item_big {
+    font-size: 1.2rem;
+    line-height: 1.22222em;
+  }
+}
+
 @media (min-width: 450px) {
   .garden__btn .btn {
     background-color: #65C338;
@@ -2241,6 +2378,27 @@ no-webp .advantages__body {
     background-color: #FF6E41;
     color: #FFFFFF;
     border-color: #FF6E41;
+  }
+
+  .languages__row {
+    margin: 0 0 50px 0;
+  }
+
+  .languages__btn .btn {
+    background-color: #973FDD;
+    color: #FFFFFF;
+    border: 2px solid #973FDD;
+    padding: 0 37px;
+  }
+
+  .languages__btn .btn:last-child {
+    border: 2px solid #3983C8;
+  }
+
+  .languages__btn .btn:last-child:hover {
+    background-color: #3983C8;
+    color: #FFFFFF;
+    border-color: #3983C8;
   }
 }
 
@@ -2469,6 +2627,11 @@ no-webp .advantages__body {
     color: #973FDD;
   }
 
+  .btn_blue:hover {
+    background-color: #FFFFFF;
+    color: #3983C8;
+  }
+
   .btn:hover span {
     -webkit-animation: btnAnim 0.5s ease-out;
             animation: btnAnim 0.5s ease-out;
@@ -2556,6 +2719,10 @@ no-webp .advantages__body {
 
   .garden__title {
     margin: 0 0 5.66667rem 0;
+  }
+
+  .languages__body {
+    padding: 6.66667rem 0 6.66667rem 0;
   }
 
   .languages__title {
@@ -2787,6 +2954,14 @@ no-webp .advantages__body {
   .content-garden {
     margin: 0;
   }
+
+  .languages__column {
+    margin: 0;
+  }
+
+  .card-languages {
+    padding: 30px 20px;
+  }
 }
 
 @media (min-width: 1070px) {
@@ -2917,6 +3092,10 @@ no-webp .advantages__body {
 
   .card-services__text {
     margin: 0 50px 35px 50px;
+  }
+
+  .card-languages {
+    padding: 50px 40px;
   }
 }
 
