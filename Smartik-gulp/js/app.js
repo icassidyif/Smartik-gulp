@@ -93,9 +93,24 @@ document.addEventListener('scrollStart', function (e) {
 }, false); //=========================================================================
 ////=include ./particles/swipper.js
 
+$("#phone").mask("+38 (999) 999-99-99");
 $.validator.addMethod('customphone', function (value, element) {
   return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
 }, "Please enter a valid phone number");
+$('#callMeForm').validate({
+  rules: {
+    phone: {
+      required: true,
+      customphone: true
+    }
+  },
+  messages: {
+    phone: {
+      required: "Це обов'язкове поле",
+      customphone: 'Невірний номер телефону'
+    }
+  }
+});
 $('#gardenForm').validate({
   rules: {
     parentName: {
@@ -182,7 +197,7 @@ $(document).ready(function () {
     showCloseBtn: true,
     closeBtnInside: true
   });
-  $('#my-custom-close').click(function () {
+  $('.my-custom-close').click(function () {
     $.magnificPopup.close();
   });
 });

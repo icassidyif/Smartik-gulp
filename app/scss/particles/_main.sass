@@ -20,7 +20,6 @@ body
   //padding: 75px 0 0 0
 //end-
 
-
 // Spoiler
 .spoiler
   display: inline-flex
@@ -55,14 +54,14 @@ body
   max-height: 90vh
   overflow: scroll
   background: white
-  padding: 10px 20px
+  padding: 20px 20px
   max-width: 770px
   margin: 40px auto
   position: relative
   +breakpoint(sm)
     padding: 20px 30px
   +breakpoint(md)
-    padding: 100px
+    padding: 50px
   &_form
     max-height: none
     overflow: auto
@@ -99,10 +98,10 @@ body
     margin: 50px 0 0 0
     .btn
       padding: 0
-      margin: 0 30px 0 0
+      margin: 0 20px 0 0
       background: none
       border: none
-      color: #973FDD
+      color: #65C338
       +breakpoint(450)
         background-color: #FFFFFF
         color: #65C338
@@ -114,15 +113,36 @@ body
           border: 2px solid #65C338
       &:last-child
         margin: 0
-        background-color: #65C338
-        color: #FFFFFF
+        background-color: #FFFFFF
+        color: #65C338
         border-radius: 26px
         +breakpoint(450)
+          background-color: #65C338
+          color: #FFFFFF
           border: 2px solid #65C338
           &:hover
             background-color: #FFFFFF
             color: #65C338
             border-color: #65C338
+
+  &_center
+    .modal-info
+      &__title
+        margin: 0 0 em(30,15) 0
+      &__form
+        flex-direction: column
+        align-items: center
+        .form__input
+          margin: 0
+      &__btn
+        margin: 30px 0 0 0
+        .btn
+          height: 40px
+          padding: 0
+          +breakpoint(450)
+            padding: 0 25px
+
+
 //
 
 

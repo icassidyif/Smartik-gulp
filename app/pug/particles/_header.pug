@@ -32,7 +32,20 @@ header(data-scroll-header).header
                 li
                   a(data-scroll href=val).menu__link=key
           .navigation-header__btn
-            a(href='#').btn.btn_header
+            a(href='#call-me').btn.btn_header.popup-with-move-anim
               .btn__icon
                 +icon('phone')
               span.btn__text Передзвоніть мені
+
+
+#call-me.modal-info.modal-info_center.zoom-anim-dialog.mfp-hide
+  .modal-info__body
+    form(action='' id='callMeForm' method='get').form.modal-info__form
+      .modal-info__title Вкажіть свій номер телефону і ми Вам зателефонуємо
+      .form__input
+        input(type='tel' id='phone' name='phone' value='' placeholder="+380...")
+      .modal-info__btn
+        button(type='reset').btn.btn_green.my-custom-close
+          span Скасувати
+        button(type='submit').btn.btn_green
+          span Надіслати

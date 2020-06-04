@@ -80,7 +80,7 @@
                   <li><a class="menu__link" data-scroll href="#">&#x41A;&#x43E;&#x43D;&#x442;&#x430;&#x43A;&#x442;&#x438;</a></li>
                 </ul>
               </nav>
-              <div class="navigation-header__btn"><a class="btn btn_header" href="#">
+              <div class="navigation-header__btn"><a class="btn btn_header popup-with-move-anim" href="#call-me">
                   <div class="btn__icon"> <svg class="svg-phone ">
                       <use href="img/icons/icons.svg#phone" /> </svg> </div><span class="btn__text">&#x41F;&#x435;&#x440;&#x435;&#x434;&#x437;&#x432;&#x43E;&#x43D;&#x456;&#x442;&#x44C; &#x43C;&#x435;&#x43D;&#x456;</span>
                 </a></div>
@@ -89,6 +89,15 @@
         </div>
       </div>
     </header>
+    <div class="modal-info modal-info_center zoom-anim-dialog mfp-hide" id="call-me">
+      <div class="modal-info__body">
+        <form class="form modal-info__form" action id="callMeForm" method="get">
+          <div class="modal-info__title">&#x412;&#x43A;&#x430;&#x436;&#x456;&#x442;&#x44C; &#x441;&#x432;&#x456;&#x439; &#x43D;&#x43E;&#x43C;&#x435;&#x440; &#x442;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;&#x443; &#x456; &#x43C;&#x438; &#x412;&#x430;&#x43C; &#x437;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;&#x443;&#x454;&#x43C;&#x43E;</div>
+          <div class="form__input"> <input type="tel" id="phone" name="phone" value placeholder="+380..."> </div>
+          <div class="modal-info__btn"> <button class="btn btn_green my-custom-close" type="reset"><span>&#x421;&#x43A;&#x430;&#x441;&#x443;&#x432;&#x430;&#x442;&#x438;</span></button> <button class="btn btn_green" type="submit"><span>&#x41D;&#x430;&#x434;&#x456;&#x441;&#x43B;&#x430;&#x442;&#x438;</span></button> </div>
+        </form>
+      </div>
+    </div>
     <main class="page" id="page-menu">
       <section class="advantages">
         <div class="advantages__body">
@@ -310,7 +319,7 @@
                     <div class="classes-content-garden__title">&#x41F;&#x43E;&#x433;&#x43E;&#x434;&#x438;&#x43D;&#x43D;&#x456; &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x442;&#x44F; ( &#x433;&#x440;&#x443;&#x43F;&#x438; &#x431;&#x435;&#x437; &#x43C;&#x430;&#x43C; &#x432;&#x456;&#x434; 3 &#x440;&#x43E;&#x43A;&#x456;&#x432;):</div>
                     <div class="classes-content-garden__text">&#x43B;&#x43E;&#x433;&#x43E;&#x43F;&#x435;&#x434;, &#x43F;&#x441;&#x438;&#x445;&#x43E;&#x43B;&#x43E;&#x433;, &#x445;&#x43E;&#x440;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x456;&#x44F;, &#x43C;&#x443;&#x437;&#x438;&#x43A;&#x430;, &#x430;&#x43D;&#x433;&#x43B;&#x456;&#x439;&#x441;&#x44C;&#x43A;&#x430;, &#x43F;&#x43E;&#x43B;&#x44C;&#x441;&#x44C;&#x43A;&#x430;, &#x43F;&#x456;&#x434;&#x433;&#x43E;&#x442;&#x43E;&#x432;&#x43A;&#x430; &#x434;&#x43E; &#x448;&#x43A;&#x43E;&#x43B;&#x438;, &#x442;&#x432;&#x43E;&#x440;&#x447;&#x456;&#x441;&#x442;&#x44C;, baby zumba.</div>
                   </div>
-                  <div class="content-garden__note">&#x422;&#x430;&#x43A;&#x43E;&#x436; &#x412;&#x438; &#x43C;&#x430;&#x454;&#x442;&#x435; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x43D;&#x430; &#x43F;&#x440;&#x43E;&#x431;&#x43D;&#x435;</div><a class="content-garden__link" href="#">&#x411;&#x415;&#x417;&#x428;&#x41A;&#x41E;&#x428;&#x422;&#x41E;&#x412;&#x41D;&#x415; &#x417;&#x410;&#x41D;&#x42F;&#x422;&#x422;&#x42F;</a>
+                  <div class="content-garden__note">&#x422;&#x430;&#x43A;&#x43E;&#x436; &#x412;&#x438; &#x43C;&#x430;&#x454;&#x442;&#x435; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x43D;&#x430; &#x43F;&#x440;&#x43E;&#x431;&#x43D;&#x435;</div><span class="content-garden__link">&#x411;&#x415;&#x417;&#x428;&#x41A;&#x41E;&#x428;&#x422;&#x41E;&#x412;&#x41D;&#x415; &#x417;&#x410;&#x41D;&#x42F;&#x422;&#x422;&#x42F;</span>
                 </div>
               </div>
               <div class="garden__column column column-lg-2-3">
@@ -398,8 +407,10 @@
                   <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
               <p> <input type="checkbox" id="creativity" name="creativity" value> <label for="creativity">&#x41A;&#x440;&#x430;&#x457;&#x43D;&#x430; &#x442;&#x432;&#x43E;&#x440;&#x447;&#x43E;&#x441;&#x442;&#x456;</label> <svg class="check-icon" viewBox="0 0 17 14">
                   <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+              <p> <input type="checkbox" id="freeLesson" name="freeLesson" value> <label for="freeLesson">&#x411;&#x435;&#x437;&#x43A;&#x43E;&#x448;&#x442;&#x43E;&#x432;&#x43D;&#x435; &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x442;&#x44F;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
             </div>
-            <div class="modal-info__btn"> <button class="btn btn_green" type="reset" id="my-custom-close"><span>&#x421;&#x43A;&#x430;&#x441;&#x443;&#x432;&#x430;&#x442;&#x438;</span></button> <button class="btn btn_green" type="submit"><span>&#x41D;&#x430;&#x434;&#x456;&#x441;&#x43B;&#x430;&#x442;&#x438;</span></button> </div>
+            <div class="modal-info__btn"> <button class="btn btn_green my-custom-close" type="reset"><span>&#x421;&#x43A;&#x430;&#x441;&#x443;&#x432;&#x430;&#x442;&#x438;</span></button> <button class="btn btn_green" type="submit"><span>&#x41D;&#x430;&#x434;&#x456;&#x441;&#x43B;&#x430;&#x442;&#x438;</span></button> </div>
           </form>
         </div>
       </div>

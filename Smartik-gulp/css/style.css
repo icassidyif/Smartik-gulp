@@ -1495,12 +1495,12 @@ textarea.input {
   content: '';
   position: absolute;
   top: 50%;
-  left: 3px;
+  left: 5px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   background-color: #3983C8;
   border-radius: 50%;
   opacity: 0;
@@ -1616,7 +1616,7 @@ body.lock {
   max-height: 90vh;
   overflow: scroll;
   background: white;
-  padding: 10px 20px;
+  padding: 20px 20px;
   max-width: 770px;
   margin: 40px auto;
   position: relative;
@@ -1671,17 +1671,39 @@ body.lock {
 
 .modal-info__btn .btn {
   padding: 0;
-  margin: 0 30px 0 0;
+  margin: 0 20px 0 0;
   background: none;
   border: none;
-  color: #973FDD;
+  color: #65C338;
 }
 
 .modal-info__btn .btn:last-child {
   margin: 0;
-  background-color: #65C338;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #65C338;
   border-radius: 26px;
+}
+
+.modal-info_center .modal-info__title {
+  margin: 0 0 2em 0;
+}
+
+.modal-info_center .modal-info__form {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-info_center .modal-info__form .form__input {
+  margin: 0;
+}
+
+.modal-info_center .modal-info__btn {
+  margin: 30px 0 0 0;
+}
+
+.modal-info_center .modal-info__btn .btn {
+  height: 40px;
+  padding: 0;
 }
 
 .header__body {
@@ -2327,6 +2349,10 @@ no-webp .advantages__body {
   margin: 0 0 20px 0;
 }
 
+.card-languages__item_big .card-languages__icon {
+  margin: 0.125em 0 0 0;
+}
+
 .card-languages__icon {
   flex: 0 0 24px;
 }
@@ -2579,6 +2605,8 @@ no-webp .advantages__body {
   }
 
   .modal-info__btn .btn:last-child {
+    background-color: #65C338;
+    color: #FFFFFF;
     border: 2px solid #65C338;
   }
 
@@ -2586,6 +2614,10 @@ no-webp .advantages__body {
     background-color: #FFFFFF;
     color: #65C338;
     border-color: #65C338;
+  }
+
+  .modal-info_center .modal-info__btn .btn {
+    padding: 0 25px;
   }
 
   .garden__btn .btn {
@@ -2864,7 +2896,7 @@ no-webp .advantages__body {
   }
 
   .modal-info {
-    padding: 100px;
+    padding: 50px;
   }
 
   .header__bg {

@@ -31,7 +31,7 @@ $(document).ready(function () {
   });
 
 
-  $('#my-custom-close').click(function(){
+  $('.my-custom-close').click(function(){
     $.magnificPopup.close();
   });
 })
