@@ -362,8 +362,45 @@
                 </div>
               </div>
             </div>
-            <div class="garden__btn"><a class="btn btn_green" href="#"><span>&#x417;&#x410;&#x41F;&#x418;&#x421;&#x410;&#x422;&#x418;&#x421;&#x42F;</span></a><a class="btn btn_orange popup-with-move-anim" href="#small-dialog"><span>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x456;&#x448;&#x435;</span></a></div>
+            <div class="garden__btn"><a class="btn btn_green popup-with-move-anim" href="#garden-form"><span>&#x417;&#x410;&#x41F;&#x418;&#x421;&#x410;&#x422;&#x418;&#x421;&#x42F;</span></a><a class="btn btn_orange popup-with-move-anim" href="#small-dialog"><span>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x456;&#x448;&#x435;</span></a></div>
           </div>
+        </div>
+      </div> <!-- Modal windows-->
+      <div class="modal-info modal-info_form zoom-anim-dialog mfp-hide" id="garden-form">
+        <div class="modal-info__body">
+          <form class="form modal-info__form" action id="gardenForm" method="get">
+            <div class="modal-info__column">
+              <div class="modal-info__title">&#x41A;&#x41E;&#x41D;&#x422;&#x410;&#x41A;&#x422;&#x41D;&#x410; &#x41E;&#x421;&#x41E;&#x411;&#x410;</div>
+              <div class="form__input"> <label for="parent-name">&#x406;&#x43C;&#x2019;&#x44F;</label> <input type="text" id="parent-name" name="parentName" value placeholder="&#x412;&#x430;&#x448;&#x435; &#x456;&#x43C;&apos;&#x44F;"> </div>
+              <div class="form__input"> <label for="parent-surname">&#x41F;&#x440;&#x456;&#x437;&#x432;&#x438;&#x449;&#x435;</label> <input type="text" id="parent-surname" name="parentSurname" value placeholder="&#x412;&#x430;&#x448;&#x435; &#x43F;&#x440;&#x456;&#x437;&#x432;&#x438;&#x449;&#x435;"> </div>
+              <div class="form__input"> <label for="phone">&#x41D;&#x43E;&#x43C;&#x435;&#x440; &#x442;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;&#x443;</label> <input type="tel" id="phone" name="phone" value placeholder="+380..."> </div>
+            </div>
+            <div class="modal-info__column">
+              <div class="modal-info__title">&#x414;&#x418;&#x422;&#x418;&#x41D;&#x410;</div>
+              <div class="form__input"> <label for="child-name">&#x406;&#x43C;&#x2019;&#x44F; &#x434;&#x438;&#x442;&#x438;&#x43D;&#x438;</label> <input type="text" id="child-name" name="childName" value placeholder="&#x406;&#x43C;&#x2019;&#x44F; &#x434;&#x438;&#x442;&#x438;&#x43D;&#x438;"> </div>
+              <div class="form__input"> <label for="child-surname">&#x41F;&#x440;&#x456;&#x437;&#x432;&#x438;&#x449;&#x435; &#x434;&#x438;&#x442;&#x438;&#x43D;&#x438;</label> <input type="text" id="child-surname" name="childSurname" value placeholder="&#x41F;&#x440;&#x456;&#x437;&#x432;&#x438;&#x449;&#x435; &#x434;&#x438;&#x442;&#x438;&#x43D;&#x438;"> </div>
+              <div class="form__input"> <label for="age">&#x412;&#x456;&#x43A; &#x434;&#x438;&#x442;&#x438;&#x43D;&#x438;</label> <input type="tel" id="age" name="age" value placeholder="&#x412;&#x456;&#x43A; &#x434;&#x438;&#x442;&#x438;&#x43D;&#x438;"> </div>
+            </div>
+            <div class="modal-info__params">
+              <div class="modal-info__title">&#x422;&#x438;&#x43F; &#x441;&#x430;&#x434;&#x43A;&#x430;</div>
+              <p> <input type="radio" checked id="full-day" name="what-day" value="full-day"> <label for="full-day">&#x421;&#x430;&#x434;&#x43E;&#x43A; &#x43F;&#x43E;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x434;&#x43D;&#x44F; ( &#x437; 8.00 &#x434;&#x43E; 18.00)</label> </p>
+              <p> <input type="radio" id="short-day" name="what-day" value="short-day"> <label for="short-day">&#x421;&#x430;&#x434;&#x43E;&#x43A; &#x43D;&#x435;&#x43F;&#x43E;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x434;&#x43D;&#x44F; ( &#x437; 8.00 &#x434;&#x43E; 14.00)</label> </p>
+              <div class="modal-info__title">&#x41E;&#x411;&#x415;&#x420;&#x406;&#x422;&#x42C; &#x41F;&#x41E;&#x421;&#x41B;&#x423;&#x413;&#x438;</div>
+              <p> <input type="checkbox" id="school-prepare" name="school-prepare" value> <label for="school-prepare">&#x41F;&#x456;&#x434;&#x433;&#x43E;&#x442;&#x43E;&#x432;&#x43A;&#x430; &#x434;&#x43E; &#x448;&#x43A;&#x43E;&#x43B;&#x438;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+              <p> <input type="checkbox" id="choreography" name="choreography" value> <label for="choreography">&#x425;&#x43E;&#x440;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x456;&#x44F;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+              <p> <input type="checkbox" id="english" name="english" value> <label for="english">&#x410;&#x43D;&#x433;&#x43B;&#x456;&#x439;&#x441;&#x44C;&#x43A;&#x430; &#x43C;&#x43E;&#x432;&#x430;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+              <p> <input type="checkbox" id="polish" name="polish" value> <label for="polish">&#x41F;&#x43E;&#x43B;&#x44C;&#x441;&#x44C;&#x43A;&#x430; &#x43C;&#x43E;&#x432;&#x430;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+              <p> <input type="checkbox" id="music" name="music" value> <label for="music">&#x41C;&#x443;&#x437;&#x438;&#x43A;&#x430;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+              <p> <input type="checkbox" id="creativity" name="creativity" value> <label for="creativity">&#x41A;&#x440;&#x430;&#x457;&#x43D;&#x430; &#x442;&#x432;&#x43E;&#x440;&#x447;&#x43E;&#x441;&#x442;&#x456;</label> <svg class="check-icon" viewBox="0 0 17 14">
+                  <path d="M2 6.78261L5.35484 12L15 2" /> </svg> </p>
+            </div>
+            <div class="modal-info__btn"> <button class="btn btn_green" type="reset" id="my-custom-close"><span>&#x421;&#x43A;&#x430;&#x441;&#x443;&#x432;&#x430;&#x442;&#x438;</span></button> <button class="btn btn_green" type="submit"><span>&#x41D;&#x430;&#x434;&#x456;&#x441;&#x43B;&#x430;&#x442;&#x438;</span></button> </div>
+          </form>
         </div>
       </div>
       <div class="modal-info zoom-anim-dialog mfp-hide" id="small-dialog">

@@ -54,7 +54,6 @@ body
   line-height: em(24,15)
   max-height: 90vh
   overflow: scroll
-
   background: white
   padding: 10px 20px
   max-width: 770px
@@ -64,6 +63,9 @@ body
     padding: 20px 30px
   +breakpoint(md)
     padding: 100px
+  &_form
+    max-height: none
+    overflow: auto
   &__body
     p
       margin: 0 0 em(15,15) 0
@@ -81,6 +83,46 @@ body
   &__phone
     display: block
     color: #65C338
+
+  &__form
+    display: flex
+    flex-wrap: wrap
+  &__column
+    flex: 0 0 50%
+  &__input
+  &__params
+  &__btn
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 50px 0 0 0
+    .btn
+      padding: 0
+      margin: 0 30px 0 0
+      background: none
+      border: none
+      color: #973FDD
+      +breakpoint(450)
+        background-color: #FFFFFF
+        color: #65C338
+        border: 2px solid #65C338
+        padding: 0 37px
+        &:hover
+          background-color: #65C338
+          color: #FFFFFF
+          border: 2px solid #65C338
+      &:last-child
+        margin: 0
+        background-color: #65C338
+        color: #FFFFFF
+        border-radius: 26px
+        +breakpoint(450)
+          border: 2px solid #65C338
+          &:hover
+            background-color: #FFFFFF
+            color: #65C338
+            border-color: #65C338
 //
 
 
