@@ -927,7 +927,7 @@ img.mfp-img {
   font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -935,7 +935,7 @@ img.mfp-img {
   font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1171,7 +1171,7 @@ textarea.input {
 .title {
   text-align: center;
   font-size: 2.13333rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.28125em;
   color: #FFFFFF;
   position: relative;
@@ -1633,6 +1633,7 @@ body.lock {
 
 .modal-info__title {
   text-transform: uppercase;
+  font-weight: 700;
   color: #3983C8;
   margin: 1.33333em 0 1em 0;
 }
@@ -3364,7 +3365,7 @@ no-webp .advantages__body {
   }
 
   .card-languages {
-    padding: 50px 40px;
+    padding: 45px 35px;
   }
 }
 
