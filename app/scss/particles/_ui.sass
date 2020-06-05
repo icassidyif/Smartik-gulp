@@ -296,3 +296,37 @@ textarea.input
   100%
     transform: translateY(0px)
 //-----------------------------------------
+
+
+// TABS
+.tabs
+  &__items
+    display: flex
+  &__item
+    background-color: #F8F8F8
+    padding: 13px 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: Bloggersans,serif
+    font-size: rem(18px)
+    font-weight: 500
+    color: #C5C5C5
+    transition: background-color, border, color 0.3s ease-out
+    flex: 1 1 auto
+    &.active
+      background-color: #FFFFFF
+      border-top: 2px solid #F28345
+      color: #F28345
+      .tabs__icon
+        fill: #F28345
+    span
+      display: none
+      +breakpoint(md)
+        display: block
+  &__icon
+    margin: 0 15px 0 0
+  &__tab
+
+
+

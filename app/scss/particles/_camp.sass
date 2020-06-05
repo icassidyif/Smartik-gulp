@@ -1,5 +1,47 @@
 .camp
   &__container
   &__body
+    padding: rem(60px) 0 rem(60px) 0
+    +breakpoint(md)
+      padding: rem(100px) 0 rem(100px) 0
   &__title
+    margin: 0 0 rem(55px) 0
+    +breakpoint(md)
+      margin: 0 0 rem(85px) 0
+    &:after
+      background-color: #F28345
+  &__content
+    padding: 30px 0 50px 0
+    font-family: Roboto,serif
+    line-height: em(24,15)
+    +breakpoint(md)
+      padding: 50px 0 75px 0
+  &__slider
+
+  &__description
+    margin: 0 0 28px 0
+  &__list
+    &_arrow
+  &__item
+    font-weight: 500
+    display: flex
+    margin: 0 0 20px 0
+  &__icon
+    flex: 0 0 24px
+    fill: #FF6E41
+    margin: 0 15px 0 0
+
   &__school
+
+
+  &__karpaty
+  &__foreign
+
+
+.slider-camp
+  +breakpoint(sm)
+    padding: 0 50px
+  &__item
+    img
+      max-width: 100%
+      max-height: 400px

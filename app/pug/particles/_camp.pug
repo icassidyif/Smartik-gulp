@@ -2,10 +2,76 @@
   .camp__container.container
     .camp__body
       .camp__title.title.title_black Мовні табори “Smartik camp”
+      .tabs
+        nav.tabs__items
+          a(href='#tab-1').tabs__item.active
+            +icon('school-camp','tabs__icon')
+            span Пришкільний Табір
+          a(href='#tab-2').tabs__item
+            +icon('karpaty-camp','tabs__icon')
+            span Табір в Карпатах
+          a(href='#tab-3').tabs__item
+            +icon('foreign-camp','tabs__icon')
+            span Табір за кордоном
 
-      .camp__school
+        #tab-1.camp__school.tabs__tab
+          .camp__content
+            .camp__row.row
+              .camp__column.column.column-xl-2-5
+                p.camp__description Програма табору дуже насичена, адже навчання поєднується з відпочнком, що впливає на кращу концентрацію учнів та ефективність засвоєння навчального матеріалу.
+                ul.camp__list.camp__list
+                  li.camp__item
+                    +icon('lang-list','camp__icon')
+                    span Заняття з
+                      span(style='color: #78CA51')  іноземних мов
+                      |, що включають в себе читання, письмо, слухання та усне мовення.
+                  li.camp__item
+                    +icon('lang-list','camp__icon')
+                    span Інтерактивні уроки, до прикладу, заняття з прикладного
+                      span(style='color: #78CA51')  мистецтва
+                      |  чи
+                      span(style='color: #78CA51')  хореографії
+                      | .
+                  li.camp__item
+                    +icon('lang-list','camp__icon')
+                    span Відвідування кінотеатру, театру, а також
+                      span(style='color: #78CA51')  розвивальних майстер класів
+                      |  за межами школи.
+                  li.camp__item
+                    +icon('lang-list','camp__icon')
+                    span Під час занять у школі проводяться розважальні
+                      span(style='color: #78CA51')  конкурси, змагання, брейн-ринги
+                      | .
+                  li.camp__item
+                    +icon('lang-list','camp__icon')
+                    span Кожен ранок починається із
+                      span(style='color: #78CA51')  зарядки
+                      |  та легких фізичних навантажень.
 
-      .camp__karpaty
+              .camp__column.column.column-xl-3-5
+                .camp__slider.slider-camp.popup-gallery
+                  .slider-camp__item
+                    a(href="img/school-camp/01.jpg")
+                      +image('school-camp/01.jpg')
+                  .slider-camp__item
+                    a(href="img/school-camp/02.jpg")
+                      +image('school-camp/02.jpg')
+                  .slider-camp__item
+                    a(href="img/school-camp/03.jpg")
+                      +image('school-camp/03.jpg')
+                  .slider-camp__item
+                    a(href="img/school-camp/04.jpg")
+                      +image('school-camp/04.jpg')
+                  .slider-camp__item
+                    a(href="img/school-camp/05.jpg")
+                      +image('school-camp/05.jpg')
+                  .slider-camp__item
+                    a(href="img/school-camp/06.jpg")
+                      +image('school-camp/06.jpg')
 
-      .camp__foreign
 
+        #tab-2.camp__karpaty.tabs__tab
+          span TEST
+
+        #tab-3.camp__foreign.tabs__tab
+          span TEST
