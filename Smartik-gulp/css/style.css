@@ -1652,13 +1652,17 @@ body.lock {
   color: #65C338;
 }
 
-.modal-info__form {
+.modal-info__row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px;
 }
 
 .modal-info__column {
   flex: 0 0 50%;
+  justify-content: center;
+  padding: 0 15px;
 }
 
 .modal-info__btn {
@@ -1689,8 +1693,10 @@ body.lock {
 }
 
 .modal-info_center .modal-info__form {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .modal-info_center .modal-info__form .form__input {
@@ -2656,6 +2662,12 @@ no-webp .advantages__body {
     background-color: #3983C8;
     color: #FFFFFF;
     border-color: #3983C8;
+  }
+}
+
+@media (min-width: 500px) {
+  .modal-info__row {
+    justify-content: flex-start;
   }
 }
 
