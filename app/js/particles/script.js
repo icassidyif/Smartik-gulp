@@ -14,18 +14,22 @@ $('.spoiler').click(function(){
 $('.tabs__item').each(function (i, item) {
   let target = $(this).attr('href');
   if($(this).hasClass('active')){
-    $(target).show(300);
+    $(target).show();
   } else {
     $(target).hide();
   }
-});
-$('.tabs__item').click(function (e) {
+}).click(function (e) {
   e.preventDefault();
   let target = $(this).attr('href');
-  $('.tabs__item').removeClass('active');
-  $('.tabs__tab').hide();
-  $(this).addClass('active');
-  $(target).show(300);
+  if($(this).hasClass('active')){
+    return false;
+  } else {
+    $('.tabs__item').removeClass('active');
+    $('.tabs__tab').hide();
+    $(target).fadeIn(500);
+    $(target).find('.camp__slider').slick('refresh');
+    $(this).addClass('active');
+  }
 });
 //=========================================================================
 //=========================================================================

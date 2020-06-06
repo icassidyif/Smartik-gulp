@@ -32,29 +32,6 @@ function ibg() {
     }
   });
 } //end img like BG
-// round buttons by Cassidy
-
-
-function roundButtons(buttons) {
-  buttons.forEach(function (button) {
-    var btnBefore = document.createElement('div');
-    var btnAfter = document.createElement('div');
-    btnBefore.classList.add('btn__before');
-    btnAfter.classList.add('btn__after');
-    button.appendChild(btnBefore);
-    button.appendChild(btnAfter);
-    var btnHeight = button.clientHeight;
-    btnBefore.style.width = "".concat(btnHeight, "px");
-    btnAfter.style.width = "".concat(btnHeight, "px");
-    btnBefore.style.left = "-".concat(btnHeight / 2, "px");
-    btnAfter.style.right = "-".concat(btnHeight / 2, "px");
-    var color = getComputedStyle(button).backgroundColor;
-    btnBefore.style.backgroundColor = color;
-    btnAfter.style.backgroundColor = color;
-    var padButton = getComputedStyle(button).padding.match(/\d+/g).map(Number);
-    button.style.padding = "".concat(padButton[0], "px ").concat(padButton[1] - btnHeight / 2, "px");
-  });
-} //end
 //
 // end
 //Menu BURGER
@@ -266,7 +243,55 @@ $(document).ready(function () {
       }
     }]
   });
-  $('.slider-camp').slick({
+  $('.slider-school-camp').slick({
+    arrows: true,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    easing: 'ease',
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 2500,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 576,
+      settings: {
+        arrows: true
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        adaptiveHeight: false
+      }
+    }]
+  });
+  $('.slider-karpaty-camp').slick({
+    arrows: true,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    easing: 'ease',
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 2500,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 576,
+      settings: {
+        arrows: true
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        adaptiveHeight: false
+      }
+    }]
+  });
+  $('.slider-foreign-camp').slick({
     arrows: true,
     adaptiveHeight: true,
     slidesToShow: 1,
@@ -307,18 +332,23 @@ $('.tabs__item').each(function (i, item) {
   var target = $(this).attr('href');
 
   if ($(this).hasClass('active')) {
-    $(target).show(300);
+    $(target).show();
   } else {
     $(target).hide();
   }
-});
-$('.tabs__item').click(function (e) {
+}).click(function (e) {
   e.preventDefault();
   var target = $(this).attr('href');
-  $('.tabs__item').removeClass('active');
-  $('.tabs__tab').hide();
-  $(this).addClass('active');
-  $(target).show(300);
+
+  if ($(this).hasClass('active')) {
+    return false;
+  } else {
+    $('.tabs__item').removeClass('active');
+    $('.tabs__tab').hide();
+    $(target).fadeIn(500);
+    $(target).find('.camp__slider').slick('refresh');
+    $(this).addClass('active');
+  }
 }); //=========================================================================
 //=========================================================================
 //=========================================================================

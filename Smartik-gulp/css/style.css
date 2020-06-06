@@ -1017,7 +1017,8 @@ img.mfp-img {
   fill: #FF6E41;
 }
 
-.svg-lang-list {
+.svg-lang-list,
+.camp__item .svg-lang-list2 {
   width: 24px;
   height: 25px;
   fill: #3983C8;
@@ -2458,13 +2459,38 @@ no-webp .advantages__body {
   margin: 0 0 20px 0;
 }
 
-.camp__icon {
+.camp__item .svg-lang-list,
+.camp__item .svg-lang-list2 {
   flex: 0 0 24px;
   fill: #FF6E41;
   margin: 0 15px 0 0;
 }
 
-.slider-camp__item img {
+.camp__item .svg-lang-list2 {
+  margin: 0 15px 0 0;
+}
+
+.camp__btn {
+  display: flex;
+  justify-content: center;
+}
+
+.camp__btn .btn {
+  padding: 0;
+  margin: 0 30px 0 0;
+  background: none;
+  border: none;
+  color: #FF6E41;
+}
+
+.camp__btn .btn:last-child {
+  margin: 0;
+  color: #78CA51;
+}
+
+.slider-school-camp__item img,
+.slider-karpaty-camp__item img,
+.slider-foreign-camp__item img {
   max-width: 100%;
   max-height: 400px;
 }
@@ -2582,9 +2608,6 @@ no-webp .advantages__body {
 .slider .slick-arrow {
   position: absolute;
   top: calc(50% - 30px);
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
   z-index: 5;
   font-size: 0;
   width: 27.5px;
@@ -2632,12 +2655,16 @@ no-webp .advantages__body {
 }
 
 .slider-garden,
-.slider-camp {
+.slider-school-camp,
+.slider-karpaty-camp,
+.slider-foreign-camp {
   position: relative;
 }
 
 .slider-garden .slick-arrow,
-.slider-camp .slick-arrow {
+.slider-school-camp .slick-arrow,
+.slider-karpaty-camp .slick-arrow,
+.slider-foreign-camp .slick-arrow {
   position: absolute;
   top: calc(50%);
   -webkit-transform: translateY(-50%);
@@ -2650,7 +2677,9 @@ no-webp .advantages__body {
 }
 
 .slider-garden .slick-prev,
-.slider-camp .slick-prev {
+.slider-school-camp .slick-prev,
+.slider-karpaty-camp .slick-prev,
+.slider-foreign-camp .slick-prev {
   left: 50%;
   background: url("../img/icons/prev-or.svg") 0 0/100% no-repeat;
   top: 100%;
@@ -2660,7 +2689,9 @@ no-webp .advantages__body {
 }
 
 .slider-garden .slick-next,
-.slider-camp .slick-next {
+.slider-school-camp .slick-next,
+.slider-karpaty-camp .slick-next,
+.slider-foreign-camp .slick-next {
   right: 50%;
   background: url("../img/icons/next-or.svg") 0 0/100% no-repeat;
   top: 100%;
@@ -2733,7 +2764,7 @@ no-webp .advantages__body {
   }
 
   .languages__row {
-    margin: 0 0 50px 0;
+    margin: 0 0 70px 0;
   }
 
   .languages__btn .btn {
@@ -2751,6 +2782,25 @@ no-webp .advantages__body {
     background-color: #3983C8;
     color: #FFFFFF;
     border-color: #3983C8;
+  }
+
+  .camp__btn .btn {
+    background-color: #FF6E41;
+    color: #FFFFFF;
+    border: 2px solid #FF6E41;
+    padding: 0 37px;
+  }
+
+  .camp__btn .btn:last-child {
+    background-color: #78CA51;
+    border: 2px solid #78CA51;
+    color: #FFFFFF;
+  }
+
+  .camp__btn .btn:last-child:hover {
+    background-color: #FFFFFF;
+    color: #78CA51;
+    border-color: #78CA51;
   }
 }
 
@@ -2853,7 +2903,9 @@ no-webp .advantages__body {
     padding: 0 50px;
   }
 
-  .slider-camp {
+  .slider-school-camp,
+  .slider-karpaty-camp,
+  .slider-foreign-camp {
     padding: 0 50px;
   }
 
@@ -3104,7 +3156,7 @@ no-webp .advantages__body {
   }
 
   .camp__content {
-    padding: 50px 0 75px 0;
+    padding: 50px 0 70px 0;
   }
 
   .slick-slide {
@@ -3120,13 +3172,17 @@ no-webp .advantages__body {
   }
 
   .slider-garden .slick-arrow,
-  .slider-camp .slick-arrow {
+  .slider-school-camp .slick-arrow,
+  .slider-karpaty-camp .slick-arrow,
+  .slider-foreign-camp .slick-arrow {
     width: 27.5px;
     height: 44px;
   }
 
   .slider-garden .slick-prev,
-  .slider-camp .slick-prev {
+  .slider-school-camp .slick-prev,
+  .slider-karpaty-camp .slick-prev,
+  .slider-foreign-camp .slick-prev {
     left: 20px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
@@ -3135,7 +3191,9 @@ no-webp .advantages__body {
   }
 
   .slider-garden .slick-next,
-  .slider-camp .slick-next {
+  .slider-school-camp .slick-next,
+  .slider-karpaty-camp .slick-next,
+  .slider-foreign-camp .slick-next {
     right: 20px;
     top: 50%;
     -webkit-transform: translate(0, -50%);

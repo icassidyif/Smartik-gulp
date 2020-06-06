@@ -15,7 +15,7 @@
     font-family: Roboto,serif
     line-height: em(24,15)
     +breakpoint(md)
-      padding: 50px 0 75px 0
+      padding: 50px 0 70px 0
   &__slider
 
   &__description
@@ -26,22 +26,58 @@
     font-weight: 500
     display: flex
     margin: 0 0 20px 0
+    .svg-lang-list
+      flex: 0 0 24px
+      fill: #FF6E41
+      margin: 0 15px 0 0
+    .svg-lang-list2
+      @extend .svg-lang-list
+      margin: 0 15px 0 0
   &__icon
-    flex: 0 0 24px
-    fill: #FF6E41
-    margin: 0 15px 0 0
+
 
   &__school
 
 
   &__karpaty
   &__foreign
+  &__btn
+    display: flex
+    justify-content: center
+    .btn
+      padding: 0
+      margin: 0 30px 0 0
+      background: none
+      border: none
+      color: #FF6E41
+      +breakpoint(450)
+        background-color: #FF6E41
+        color: #FFFFFF
+        border: 2px solid #FF6E41
+        padding: 0 37px
+      &:last-child
+        margin: 0
+        color: #78CA51
+        +breakpoint(450)
+          background-color: #78CA51
+          border: 2px solid #78CA51
+          color: #FFFFFF
+          &:hover
+            background-color: #FFFFFF
+            color: #78CA51
+            border-color: #78CA51
 
 
-.slider-camp
+
+
+.slider-school-camp,.slider-karpaty-camp,.slider-foreign-camp
   +breakpoint(sm)
     padding: 0 50px
   &__item
     img
       max-width: 100%
       max-height: 400px
+
+
+
+
