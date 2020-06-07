@@ -1038,6 +1038,21 @@ img.mfp-img {
   fill: #C5C5C5;
 }
 
+.svg-facebook,
+.svg-instagram {
+  width: 22px;
+  height: 22px;
+  fill: #FFCA41;
+}
+
+.svg-phone-contact,
+.svg-mail-contact,
+.svg-locate-contact {
+  width: 16px;
+  height: 16px;
+  fill: #FFCA41;
+}
+
 .burger-menu {
   position: relative;
   display: block;
@@ -2700,6 +2715,128 @@ no-webp .advantages__body {
           transform: translate(200%, 50%);
 }
 
+.footer {
+  font-family: Roboto,serif;
+}
+
+.footer__body {
+  background-color: #143553;
+  color: #FFFFFF;
+  position: relative;
+  padding: 1.33333rem 0 1.33333rem 0;
+  z-index: 1;
+}
+
+.footer__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/footer-decor.svg") top center no-repeat;
+}
+
+.footer__logo {
+  display: block;
+  max-width: 130px;
+  margin: 0 0 20px 0;
+}
+
+.footer__logo img {
+  width: 100%;
+}
+
+.footer__subtitle {
+  font-family: Roboto, serif;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.66667em;
+  margin: 0 0 30px 0;
+}
+
+.footer__social {
+  margin: 0 0 60px 0;
+}
+
+.footer__social .svg-facebook {
+  margin: 0 10px 0 0;
+}
+
+.footer__title {
+  font-size: 1.46667rem !important;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 45px 0;
+}
+
+.footer__title:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  background-color: #FFCA41;
+  height: 2px;
+  width: 100%;
+}
+
+.menu-footer__item {
+  margin: 0 0 16px 0;
+}
+
+.menu-footer__item a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  transition: color 0.2s ease-out;
+}
+
+.menu-footer__item a:hover {
+  color: #FFCA41;
+}
+
+.menu-footer__item .svg-lang-list2 {
+  width: 16px;
+  height: 16px;
+  fill: #FFCA41;
+  margin: 0 12px 0 0;
+}
+
+.contacts-footer__title {
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.contacts-footer__item {
+  line-height: 1.33333em;
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 13px 0;
+}
+
+.contacts-footer__item svg {
+  margin: 0 12px 0 0;
+}
+
+.contacts-footer__item a {
+  color: #FFFFFF;
+  transition: color 0.2s ease-out;
+}
+
+.contacts-footer__item a:hover {
+  color: #FFCA41;
+}
+
+.contacts-footer__hr {
+  border-bottom: 1px dashed rgba(241, 241, 241, 0.5);
+  margin: 0 0 20px 0;
+}
+
+.contacts-footer__phone {
+  font-weight: 500;
+}
+
 @media (min-width: 360px) {
   .card-languages {
     padding: 50px 40px;
@@ -3199,6 +3336,10 @@ no-webp .advantages__body {
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
+  }
+
+  .footer__body {
+    padding: 3.33333rem 0 3.33333rem 0;
   }
 }
 

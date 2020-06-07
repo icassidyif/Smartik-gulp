@@ -1,1 +1,71 @@
-h2 FOOTER
+footer.footer
+  .footer__body
+    .footer__bg
+    .footer__container.container
+      .footer__row.row
+        .footer__column.column.column-lg-1-4
+          a(href='#').footer__logo
+            +image('logo.png')
+          .footer__subtitle
+            span
+              span(style='font-weight: 700; color: white') “Smartik” –
+              |  це навчальниій простір, який включає в себе курси іноземних мов, дитячий садок та організаціяю літніх / зимових таборів.
+          .footer__social
+            a(href='#')
+              +icon('facebook')
+            a(href='#')
+              +icon('instagram')
+          .footer__copyright
+            span Smartik © 2020
+
+        .footer__column.column.column-lg-1-6
+          h2.footer__title Навігація
+          nav.footer__menu.menu-footer
+            ul.menu-footer__list
+              li.menu-footer__item
+                a(href='#')
+                  +icon('lang-list2')
+                  span Садок
+              li.menu-footer__item
+                a(href='#')
+                  +icon('lang-list2')
+                  span Табори
+              li.menu-footer__item
+                a(href='#')
+                  +icon('lang-list2')
+                  span Мовні курси
+              li.menu-footer__item
+                a(href='#')
+                  +icon('lang-list2')
+                  span Переваги
+              li.menu-footer__item
+                a(href='#')
+                  +icon('lang-list2')
+                  span Про нас
+
+
+        .footer__column.column.column-lg-1-4
+          h2.footer__title Контакти
+          .footer__contacts.contacts-footer
+            span.contacts-footer__title Дитячий садок
+            .contacts-footer__item
+              +icon('phone-contact')
+              a(href='tel:+380675232357').contacts-footer__phone + 38 (067) 523-23-57
+            .contacts-footer__item
+              +icon('mail-contact')
+              a(href='mailto:smartikif@gmail.com') smartikif@gmail.com
+            .contacts-footer__item
+              +icon('locate-contact')
+              span вул. Шевченка 34 б, м. Івано-Франківськ
+            .contacts-footer__hr
+            span.contacts-footer__title Мовні табори, курси іноземних мов
+            .contacts-footer__item
+              +icon('phone-contact')
+              a(href='tel:+380675232357').contacts-footer__phone + 38 (067) 523-23-57
+
+
+
+
+
+        .footer__column.column.column-lg-1-3
+          h2.footer__title Ми знаходимося тут
