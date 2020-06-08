@@ -30,9 +30,12 @@ $('.tabs__item').each(function (i, item) {
     $(target).find('.camp__slider').slick('refresh');
     $(this).addClass('active');
   }
-
 });
-//=========================================================================
+//footer copyright====================================================
+let spanElement = document.createElement('span');
+let copyRight = `Smartik © 2017 - ${new Date().getFullYear()}.  Розроблено <a href="#"> d-wave </a>`;
+spanElement.innerHTML = copyRight;
+$('.footer__copyright').append(spanElement);
 //=========================================================================
 //=========================================================================
 //=========================================================================

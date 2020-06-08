@@ -2737,10 +2737,19 @@ no-webp .advantages__body {
   background: url("../img/footer-decor.svg") top center no-repeat;
 }
 
+.footer__column {
+  margin: 0 0 30px 0;
+}
+
+.footer__column:last-child {
+  margin: 0;
+}
+
 .footer__logo {
   display: block;
   max-width: 130px;
-  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  margin: 0 auto;
 }
 
 .footer__logo img {
@@ -2748,6 +2757,7 @@ no-webp .advantages__body {
 }
 
 .footer__subtitle {
+  text-align: center;
   font-family: Roboto, serif;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.66667em;
@@ -2755,11 +2765,25 @@ no-webp .advantages__body {
 }
 
 .footer__social {
-  margin: 0 0 60px 0;
+  text-align: center;
 }
 
 .footer__social .svg-facebook {
   margin: 0 10px 0 0;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
+.footer__copyright a {
+  color: #FF6E41;
+  font-weight: 700;
+  transition: color 0.2s ease-out;
+}
+
+.footer__copyright a:hover {
+  color: #FFCA41;
 }
 
 .footer__title {
@@ -3052,6 +3076,22 @@ no-webp .advantages__body {
 
   .slider .slick-dots li {
     margin: 0 15px;
+  }
+
+  .footer__logo {
+    margin: 0;
+  }
+
+  .footer__subtitle {
+    text-align: left;
+  }
+
+  .footer__social {
+    text-align: left;
+  }
+
+  .footer__copyright {
+    text-align: left;
   }
 }
 
@@ -3541,6 +3581,10 @@ no-webp .advantages__body {
 
   .card-languages {
     padding: 30px 20px;
+  }
+
+  .footer__column {
+    margin: 0;
   }
 }
 
