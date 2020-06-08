@@ -2858,8 +2858,12 @@ no-webp .advantages__body {
 }
 
 .contacts-footer__hr {
-  border-bottom: 1px dashed rgba(241, 241, 241, 0.5);
   margin: 0 0 20px 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #143553 33%, rgba(241, 241, 241, 0.5) 0%);
+  background-position: top;
+  background-size: 11px 4px;
+  background-repeat: repeat-x;
 }
 
 .contacts-footer__phone {
