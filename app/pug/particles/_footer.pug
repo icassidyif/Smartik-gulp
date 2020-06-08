@@ -1,4 +1,4 @@
-footer.footer
+footer.footer#footer
   .footer__body
     .footer__bg
     .footer__container.container
@@ -21,23 +21,27 @@ footer.footer
           nav.footer__menu.menu-footer
             ul.menu-footer__list
               li.menu-footer__item
-                a(href='#')
+                a(data-scroll href='#')
+                  +icon('lang-list2')
+                  span Головна
+              li.menu-footer__item
+                a(data-scroll href='#garden')
                   +icon('lang-list2')
                   span Садок
               li.menu-footer__item
-                a(href='#')
+                a(data-scroll href='#camp')
                   +icon('lang-list2')
                   span Табори
               li.menu-footer__item
-                a(href='#')
+                a(data-scroll href='#languages')
                   +icon('lang-list2')
                   span Мовні курси
               li.menu-footer__item
-                a(href='#')
+                a(data-scroll href='#advantages')
                   +icon('lang-list2')
                   span Переваги
               li.menu-footer__item
-                a(href='#')
+                a(data-scroll href='#about')
                   +icon('lang-list2')
                   span Про нас
 

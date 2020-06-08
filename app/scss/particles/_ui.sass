@@ -165,8 +165,6 @@ textarea.input
     font-size: rem(32px)
     line-height: em(35,32)
     text-align: left
-    &:after
-      display: none
     +breakpoint(md)
       font-size: rem(42px)
       line-height: em(45,42)
@@ -320,12 +318,17 @@ textarea.input
       color: #F28345
       .tabs__icon
         fill: #F28345
+    &:hover
+      background-color: #FFFFFF
+      .tabs__icon
+        fill: #F28345
     span
       display: none
       +breakpoint(md)
         display: block
   &__icon
     margin: 0 15px 0 0
+    transition: fill 0.2s ease-out
   &__tab
 
 

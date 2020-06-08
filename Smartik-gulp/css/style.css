@@ -1220,10 +1220,6 @@ textarea.input {
   text-align: left;
 }
 
-.title_main:after {
-  display: none;
-}
-
 .title_small {
   font-size: 1.6rem;
 }
@@ -1441,12 +1437,21 @@ textarea.input {
   fill: #F28345;
 }
 
+.tabs__item:hover {
+  background-color: #FFFFFF;
+}
+
+.tabs__item:hover .tabs__icon {
+  fill: #F28345;
+}
+
 .tabs__item span {
   display: none;
 }
 
 .tabs__icon {
   margin: 0 15px 0 0;
+  transition: fill 0.2s ease-out;
 }
 
 .form {
