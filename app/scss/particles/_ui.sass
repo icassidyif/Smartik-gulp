@@ -165,9 +165,13 @@ textarea.input
     font-size: rem(32px)
     line-height: em(35,32)
     text-align: left
+    &:after
+      bottom: -15px
     +breakpoint(md)
       font-size: rem(42px)
       line-height: em(45,42)
+      &:after
+        bottom: -30px
   &_small
     font-size: rem(24px)
     &:after

@@ -22,7 +22,11 @@
 
 // breakpoints by Cassidy
 =breakpoint($point)
-  @if $point == sm
+  @if $point == min
+    //UltraSmall devices
+    @media (min-width: #{$screen-min-min})
+      @content
+  @else if $point == sm
     //Small devices
     @media (min-width: #{$screen-sm-min})
       @content
