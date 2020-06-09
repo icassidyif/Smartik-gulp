@@ -7,7 +7,6 @@ const rename = require('gulp-rename');
 const browsersync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const prettyHtml = require('gulp-pretty-html');
-const gulpSeo = require('gulp-seo');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
@@ -84,28 +83,13 @@ function htmlCompiler() {
   return src(path.app.html)
       .pipe(changed(projectFolder))
       .pipe(plumberNotifier())
-      .pipe(pug({
-        pretty: true
-      }))
+      .pipe(pug())
       .pipe(webpHTML())
-      .pipe(gulpSeo({
-        list: ['og', 'se', 'schema', 'twitter'],
-        meta: {
-          title: 'Смартік',
-          description: 'Приватний заклад дошкільної освіти',
-          author: 'Cassidy',
-          keywords: ['садок', 'освіта', 'діти', 'навчання'],
-          robots: {
-            index: false, // true
-            follow: true // true
-          },
-          revisitAfter: '5 month', // 3 month
-          type: 'website'
-        }
-      }))
+      .pipe(dest(path.build.html))
       .pipe(prettyHtml({
         indent_size: 2
       }))
+      .pipe(rename({extname: '.pretty.html'}))
       .pipe(dest(path.build.html))
       .pipe(browsersync.stream())
 }
