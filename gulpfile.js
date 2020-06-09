@@ -194,8 +194,8 @@ function imgCompiler() {
 function generateFavicon(done) {
   realFavicon.generateFavicon({
     masterPicture: `${sourceFolder}/img/favicon.png`,
-    dest: `${projectFolder}/img/favicons/`,
-    iconsPath: '/img/favicons/',
+    dest: `${projectFolder}/img/favicons`,
+    iconsPath: `/img/favicons/`,
     design: {
       ios: {
         pictureAspect: 'noChange',
@@ -249,11 +249,10 @@ function generateFavicon(done) {
 // this task whenever you modify a page. You can keep this task
 // as is or refactor your existing HTML pipeline.
 function injectFaviconMarkups (){
-  return src([ `${projectFolder}/*.html`])
-      .pipe(changed(projectFolder))
-      .pipe(plumberNotifier())
+  return src([`${projectFolder}/*.html`])
+      // .pipe(plumberNotifier())
       .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-      .pipe(dest(projectFolder));
+    .pipe(dest(path.build.html))
 }
 // Check for updates on RealFaviconGenerator (think: Apple has just
 // released a new Touch icon along with the latest version of iOS).
