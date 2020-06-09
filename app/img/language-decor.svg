@@ -1,4 +1,4 @@
-<svg width="4000" height="837" viewBox="0 0 4000 837" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="4000" height="1630" viewBox="0 0 4000 1630" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2052 835C2191.73 800.013 2443.54 681.39 2332.96 486.79C2194.73 243.541 2272.62 102.764 2430.21 114.703C2587.8 126.642 2827.33 148.529 2957 374.865" stroke="#EFEFEF" stroke-width="4" stroke-dasharray="30 20"/>
 <path d="M1317 832.5C1224.33 795.167 1076.4 685.7 1226 546.5C1413 372.5 1784 221.5 1207.5 6" stroke="#EFEFEF" stroke-width="4" stroke-dasharray="30 20"/>
 <path d="M1221.63 140.429L1272.49 182.209L1210.88 205.363L1221.63 140.429Z" fill="#F3F3F3"/>
@@ -12,4 +12,12 @@
 <rect y="558.091" width="40.3023" height="40.3023" transform="rotate(-29.9007 0 558.091)" fill="#F3F3F3"/>
 <path d="M2957 374.5C3170.33 697 3633.6 1073.8 3780 1" stroke="#EFEFEF" stroke-width="4" stroke-dasharray="30 20"/>
 <path d="M193 3C500.333 69.6667 969.8 329.2 389 834" stroke="#F3F3F3" stroke-width="4" stroke-dasharray="30 20"/>
+<path d="M372.998 847C292.498 920.167 192.498 1087.5 436.498 1171.5C741.498 1276.5 199.497 1393.5 173 1400C64.3422 1426.65 24.5 1592.5 166.5 1624.5" stroke="#F3F3F3" stroke-width="4" stroke-dasharray="30 20"/>
+<path d="M1336 841.5C1410 866.5 1939.5 1042.56 1421.5 1182.5C770.002 1358.5 1160 1627 1190 1627.5" stroke="#EFEFEF" stroke-width="4" stroke-dasharray="30 20"/>
+<path d="M2024 844C1951.33 862 1856.8 934.4 2060 1080C2308.17 1205.67 2898.9 1395.7 3276.5 1150.5C3748.5 844 3815 1452.5 3782.5 1613" stroke="#EFEFEF" stroke-width="4" stroke-dasharray="30 20"/>
+<path d="M1885.68 1362.63L1908.55 1446.16L1824.78 1424.2L1885.68 1362.63Z" fill="#F3F3F3"/>
+<path d="M2891.2 1047.01L2944.37 1076.72L2892.06 1107.91L2891.2 1047.01Z" fill="#F3F3F3"/>
+<path d="M185.593 1146.4L198.945 1195.17L150.036 1182.35L185.593 1146.4Z" fill="#F3F3F3"/>
+<rect x="3489" y="1289.69" width="44" height="44" transform="rotate(-22.291 3489 1289.69)" fill="#F3F3F3"/>
+<rect x="699" y="1386.69" width="44" height="44" transform="rotate(-22.291 699 1386.69)" fill="#F3F3F3"/>
 </svg>

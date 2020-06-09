@@ -1323,11 +1323,6 @@ textarea.input {
 
 .btn_header:hover {
   background-color: #FFFFFF;
-  color: #FFCA41;
-}
-
-.btn_header:hover .svg-phone {
-  fill: #FFCA41;
 }
 
 .btn__text {
@@ -1438,7 +1433,7 @@ textarea.input {
 }
 
 .tabs__item:hover {
-  background-color: #FFFFFF;
+  color: #F28345;
 }
 
 .tabs__item:hover .tabs__icon {
@@ -1625,6 +1620,7 @@ html {
 
 body {
   font-family: "Bloggersans";
+  color: #4E4E4E;
 }
 
 body.lock {
@@ -1970,7 +1966,7 @@ no-webp .advantages__body {
   color: #181818;
   font-size: 1.33333rem;
   line-height: 1.2em;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 0 0.53333rem 0;
 }
 
@@ -2139,7 +2135,7 @@ no-webp .advantages__body {
   font-family: Roboto,serif;
   font-size: 15px;
   line-height: 1.6em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 20px 20px 20px;
   max-width: 350px;
   flex: 1 1 auto;
@@ -2962,14 +2958,14 @@ no-webp .advantages__body {
   }
 
   .camp__btn .btn:last-child {
-    background-color: #78CA51;
+    background-color: #FFFFFF;
     border: 2px solid #78CA51;
-    color: #FFFFFF;
+    color: #78CA51;
   }
 
   .camp__btn .btn:last-child:hover {
-    background-color: #FFFFFF;
-    color: #78CA51;
+    background-color: #78CA51;
+    color: #FFFFFF;
     border-color: #78CA51;
   }
 }
