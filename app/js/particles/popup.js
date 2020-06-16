@@ -4,7 +4,6 @@ $(document).ready(function () {
     type: 'image',
     tLoading: 'Завантаження фото #%curr%...',
     mainClass: 'mfp-fade',
-
     gallery: {
       enabled: true,
       navigateByImgClick: true,

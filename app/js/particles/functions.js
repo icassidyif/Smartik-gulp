@@ -30,9 +30,58 @@ function ibg() {
 }
 //end img like BG
 
-
-
- //
-
-
+// form send process
+const ajaxSend = (formData, url) => {
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type':'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+    .then(response => {
+      console.log(response);
+      console.log(JSON.stringify(formData));
+      if(response.status === true){
+        showPopupSuccess();
+      } else {
+        showPopupError();
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      // showPopupError();
+    })
+};
 // end
+
+// show popup alert
+function showPopupSuccess() {
+  $.magnificPopup.open({
+    items: {
+      src: $('#alert-success-send'),
+      type:'inline'
+    },
+    modal: true
+  });
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+}
+
+function showPopupError() {
+  $.magnificPopup.open({
+    items: {
+      src: $('#alert-error-send'),
+      type:'inline'
+    },
+    modal: true
+  });
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+}
+
+//end popup alert

@@ -31,6 +31,9 @@ $('.tabs__item').each(function (i, item) {
     $(this).addClass('active');
   }
 });
+
+
+
 //footer copyright====================================================
 let spanElement = document.createElement('span');
 let copyRight = `Smartik © 2017 - ${new Date().getFullYear()}.  Розроблено <a href="#"> d-wave </a>`;

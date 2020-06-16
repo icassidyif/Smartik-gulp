@@ -16,6 +16,13 @@ $('#callMeForm').validate({
       required: "Це обов'язкове поле",
       customphone: 'Невірний номер телефону'
     }
+  },
+  submitHandler: function (form) {
+    let url = 'https://addvin.fapi.space/mail.php';
+    let formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
   }
 });
 
@@ -73,9 +80,13 @@ $('#gardenForm').validate({
       number: 'Введіть число'
     }
   },
-  // submitHandler: function () {
-  //   alert('OK')
-  // }
+  submitHandler: function (form) {
+    let url = 'https://addvin.fapi.space/mail.php';
+    let formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
+  }
 });
 
 
@@ -131,6 +142,13 @@ $('#campForm').validate({
       required: "Це обов'язкове поле",
       number: 'Введіть число'
     }
+  },
+  submitHandler: function (form) {
+    let url = 'https://jsonplaceholder.typicode.com/posts';
+    let formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
   }
 });
 
@@ -187,5 +205,12 @@ $('#languagesForm').validate({
       required: "Це обов'язкове поле",
       number: 'Введіть число'
     }
+  },
+  submitHandler: function (form) {
+    let url = 'https://jsonplaceholder.typicode.com/posts';
+    let formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
   }
 })

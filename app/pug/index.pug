@@ -2,6 +2,17 @@ include particles/_vars
 include particles/_mixins
 include particles/_head
 body
+  #alert-success-send.mfp-hide.white-popup-block
+    h2.white-popup-block__title.title.title_small.title_black Дякуємо за запит :-)
+    p Скоро ми з Вами зв'яжемось!
+    p
+      .popup-modal-dismiss.white-popup-block__btn.btn.btn_violet Добре
+
+  #alert-error-send.mfp-hide.white-popup-block
+    h2.white-popup-block__title.title.title_small.title_black Нажаль щось пішло не так :-(
+    p Спробуйте, будь ласка, пізніше!
+    p
+      .popup-modal-dismiss.white-popup-block__btn.btn.btn_violet Добре
   .wrapper
     include particles/_header
     main.page#page-menu

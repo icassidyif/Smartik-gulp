@@ -32,8 +32,59 @@ function ibg() {
     }
   });
 } //end img like BG
-//
-// end
+// form send process
+
+
+var ajaxSend = function ajaxSend(formData, url) {
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  }).then(function (response) {
+    console.log(response);
+    console.log(JSON.stringify(formData));
+
+    if (response.status === true) {
+      showPopupSuccess();
+    } else {
+      showPopupError();
+    }
+  }).catch(function (error) {
+    console.error(error); // showPopupError();
+  });
+}; // end
+// show popup alert
+
+
+function showPopupSuccess() {
+  $.magnificPopup.open({
+    items: {
+      src: $('#alert-success-send'),
+      type: 'inline'
+    },
+    modal: true
+  });
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+}
+
+function showPopupError() {
+  $.magnificPopup.open({
+    items: {
+      src: $('#alert-error-send'),
+      type: 'inline'
+    },
+    modal: true
+  });
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+} //end popup alert
 //Menu BURGER
 
 
@@ -70,6 +121,39 @@ document.addEventListener('scrollStart', function (e) {
 }, false); //=========================================================================
 ////=include ./particles/swipper.js
 
+$(document).ready(function () {
+  $('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Завантаження фото #%curr%...',
+    mainClass: 'mfp-fade',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    },
+    removalDelay: 300
+  });
+  $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide-bottom',
+    showCloseBtn: true,
+    closeBtnInside: true
+  });
+  $('.my-custom-close').click(function () {
+    $.magnificPopup.close();
+  });
+});
 $("#phone").mask("+38 (999) 999-99-99");
 $.validator.addMethod('customphone', function (value, element) {
   return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
@@ -86,6 +170,13 @@ $('#callMeForm').validate({
       required: "Це обов'язкове поле",
       customphone: 'Невірний номер телефону'
     }
+  },
+  submitHandler: function submitHandler(form) {
+    var url = 'https://addvin.fapi.space/mail.php';
+    var formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
   }
 });
 $('#gardenForm').validate({
@@ -140,10 +231,14 @@ $('#gardenForm').validate({
       required: "Це обов'язкове поле",
       number: 'Введіть число'
     }
-  } // submitHandler: function () {
-  //   alert('OK')
-  // }
-
+  },
+  submitHandler: function submitHandler(form) {
+    var url = 'https://addvin.fapi.space/mail.php';
+    var formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
+  }
 });
 $('#campForm').validate({
   rules: {
@@ -197,6 +292,13 @@ $('#campForm').validate({
       required: "Це обов'язкове поле",
       number: 'Введіть число'
     }
+  },
+  submitHandler: function submitHandler(form) {
+    var url = 'https://jsonplaceholder.typicode.com/posts';
+    var formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
+    $.magnificPopup.close();
   }
 });
 $('#languagesForm').validate({
@@ -251,40 +353,14 @@ $('#languagesForm').validate({
       required: "Це обов'язкове поле",
       number: 'Введіть число'
     }
-  }
-});
-$(document).ready(function () {
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Завантаження фото #%curr%...',
-    mainClass: 'mfp-fade',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    },
-    removalDelay: 300
-  });
-  $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
-    fixedContentPos: true,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom',
-    showCloseBtn: true,
-    closeBtnInside: true
-  });
-  $('.my-custom-close').click(function () {
+  },
+  submitHandler: function submitHandler(form) {
+    var url = 'https://jsonplaceholder.typicode.com/posts';
+    var formData = $(form).serializeArray();
+    ajaxSend(formData, url);
+    form.reset();
     $.magnificPopup.close();
-  });
+  }
 });
 $(document).ready(function () {
   $('.slider').slick({
