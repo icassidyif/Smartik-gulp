@@ -22,7 +22,7 @@ header.header
         .navigation-header__body
           .burger-menu
             span
-          a(href='#').navigation-header__logo
+          a(href='/').navigation-header__logo
             +image('logo.png')
           nav.navigation-header__menu.menu
             -let mainMenu = {'Переваги': '#advantages', 'Садок': '#garden', 'Табори': '#camp', 'Мовні курси': '#languages', 'Про нас':'#about','Викладачі': '#team', 'Контакти': '#footer'};
@@ -35,7 +35,6 @@ header.header
               .btn__icon
                 +icon('phone')
               span.btn__text Передзвоніть мені
-
 
 #call-me.modal-info.modal-info_center.zoom-anim-dialog.mfp-hide
   .modal-info__body
