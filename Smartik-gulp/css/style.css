@@ -2026,6 +2026,7 @@ no-webp .advantages__body {
   line-height: 1.09091em;
   font-weight: 500;
   margin: 2rem 0 1rem 0;
+  color: #181818;
 }
 
 .about__quote .svg-quote {
@@ -2034,7 +2035,7 @@ no-webp .advantages__body {
 }
 
 .about__text {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.6em;
 }
