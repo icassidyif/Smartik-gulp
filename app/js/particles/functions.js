@@ -40,17 +40,17 @@ const ajaxSend = (formData, url) => {
     body: JSON.stringify(formData)
   })
     .then(response => {
-      console.log(response);
-      console.log(JSON.stringify(formData));
-      if(response.status === true){
+      return response.json();
+    })
+    .then(data => {
+      if(data === 'true'){
         showPopupSuccess();
-      } else {
+      }else {
         showPopupError();
       }
     })
     .catch(error => {
       console.error(error);
-      // showPopupError();
     })
 };
 // end

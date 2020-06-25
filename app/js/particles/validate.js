@@ -18,11 +18,11 @@ $('#callMeForm').validate({
     }
   },
   submitHandler: function (form) {
-    let url = 'https://addvin.fapi.space/mail.php';
+    $.magnificPopup.close();
+    let url = '/php/call.php';
     let formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 
@@ -81,11 +81,11 @@ $('#gardenForm').validate({
     }
   },
   submitHandler: function (form) {
-    let url = 'https://addvin.fapi.space/mail.php';
+    $.magnificPopup.close();
+    let url = '/php/garden.php';
     let formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 
@@ -144,11 +144,11 @@ $('#campForm').validate({
     }
   },
   submitHandler: function (form) {
-    let url = 'https://jsonplaceholder.typicode.com/posts';
+    $.magnificPopup.close();
+    let url = '/php/camp.php';
     let formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 
@@ -207,10 +207,10 @@ $('#languagesForm').validate({
     }
   },
   submitHandler: function (form) {
-    let url = 'https://jsonplaceholder.typicode.com/posts';
+    $.magnificPopup.close();
+    let url = '/php/languages.php';
     let formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 })

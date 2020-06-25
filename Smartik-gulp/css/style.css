@@ -2038,6 +2038,20 @@ no-webp .advantages__body {
   margin: 0 0 1em 0;
 }
 
+.about__list {
+  margin: 5px 0;
+}
+
+.about__list li {
+  padding: 0 0 0 10px;
+  position: relative;
+}
+
+.about__list li:before {
+  content: '-';
+  margin: 0 5px 0 0;
+}
+
 .picture-about {
   width: 100%;
   max-width: 370px;

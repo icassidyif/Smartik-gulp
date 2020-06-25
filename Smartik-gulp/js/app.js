@@ -43,16 +43,15 @@ var ajaxSend = function ajaxSend(formData, url) {
     },
     body: JSON.stringify(formData)
   }).then(function (response) {
-    console.log(response);
-    console.log(JSON.stringify(formData));
-
-    if (response.status === true) {
+    return response.json();
+  }).then(function (data) {
+    if (data === 'true') {
       showPopupSuccess();
     } else {
       showPopupError();
     }
   }).catch(function (error) {
-    console.error(error); // showPopupError();
+    console.error(error);
   });
 }; // end
 // show popup alert
@@ -172,11 +171,11 @@ $('#callMeForm').validate({
     }
   },
   submitHandler: function submitHandler(form) {
-    var url = 'https://addvin.fapi.space/mail.php';
+    $.magnificPopup.close();
+    var url = '/php/call.php';
     var formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 $('#gardenForm').validate({
@@ -233,11 +232,11 @@ $('#gardenForm').validate({
     }
   },
   submitHandler: function submitHandler(form) {
-    var url = 'https://addvin.fapi.space/mail.php';
+    $.magnificPopup.close();
+    var url = '/php/garden.php';
     var formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 $('#campForm').validate({
@@ -294,11 +293,11 @@ $('#campForm').validate({
     }
   },
   submitHandler: function submitHandler(form) {
-    var url = 'https://jsonplaceholder.typicode.com/posts';
+    $.magnificPopup.close();
+    var url = '/php/camp.php';
     var formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 $('#languagesForm').validate({
@@ -355,11 +354,11 @@ $('#languagesForm').validate({
     }
   },
   submitHandler: function submitHandler(form) {
-    var url = 'https://jsonplaceholder.typicode.com/posts';
+    $.magnificPopup.close();
+    var url = '/php/languages.php';
     var formData = $(form).serializeArray();
     ajaxSend(formData, url);
     form.reset();
-    $.magnificPopup.close();
   }
 });
 $(document).ready(function () {
